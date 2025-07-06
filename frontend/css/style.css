@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll; /* per forzare la scrollbar */
+}
+
 body {
     background-color: #F7F7F7;
     font-family: "Jost", sans-serif;
@@ -35,6 +39,11 @@ body {
     border-bottom: 3px solid #F7F7F7;
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
+}
+
+.nav-buttons li a {
+    text-decoration: none;
+    color: #59200A; /* colore del testo */
 }
 
 .nav-buttons li:hover {
