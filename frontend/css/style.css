@@ -190,7 +190,7 @@ body {
 footer {
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
-    grid-template-rows: 0.5fr 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
     height: 30vh;
     gap: 5px;
     background-color: #59200A;
@@ -201,11 +201,11 @@ footer {
 }
 
 .footer--logo-container {
-    grid-area: 3/1/4/2;
+    grid-area: 2 / 1 / 3 / 2;
 }
 
 .footer--links-container {
-    grid-area: 2 / 1 / 3 / 4;
+    grid-area: 1 / 1 / 2 / 4;
     width: 100%;
     height: 100%;
     border-bottom: 2px solid #F7F7F7;
@@ -232,7 +232,7 @@ footer {
 }
 
 .footer--copyright-container {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 2 / 2 / 3 / 3;
 }
 
 .footer--copyright-container h5 {
@@ -241,7 +241,7 @@ footer {
 }
 
 .footer--socials-container {
-    grid-area: 3 / 3 / 4 / 4;
+    grid-area: 2 / 3 / 3 / 4;
 }
 
 .fa {
