@@ -1,7 +1,8 @@
-<<<<<<< HEAD
 # project-work
 Project work - page for the download of sustainability reports
-=======
+
+
+
 /project-work
 │
 ├── frontend/
@@ -38,9 +39,3 @@ Project work - page for the download of sustainability reports
 ├── README.md
 ├── .gitignore
 └── package.json (opzionale, se vuoi un root per comandi comuni)
-
-
-
-
-
->>>>>>> ef6cc41 (first commit)
