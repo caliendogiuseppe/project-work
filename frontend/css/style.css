@@ -318,4 +318,22 @@ footer {
         font-size: 3rem;
     }
 
+    footer {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer--links-container {
+        padding: 7% 0;
+    }
+
+    .footer--logo-container {
+        margin-top: 7%;
+    }
+
+    .footer--links-container > ul {
+        display: flex;
+        flex-direction: column;
+    }
 }
