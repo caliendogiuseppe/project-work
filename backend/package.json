@@ -1,0 +1,11 @@
+{
+  "name": "project-work-backend",
+  "version": "1.0.0",
+  "description": "backend in express-js for project work 'ferrero sustainability reports'",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Giuseppe Paolino Caliendo",
+  "license": "ISC"
+}
