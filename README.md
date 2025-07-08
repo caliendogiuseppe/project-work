@@ -1,5 +1,5 @@
 # project-work
-Project work - page for the download of sustainability reports
+Project work - website for the download of sustainability reports
 
 
 
@@ -25,16 +25,15 @@ Project work - page for the download of sustainability reports
 │	    	 
 │
 ├── backend/
-│   	├── app.js (o server.js)	#punto di ingresso principale dell'applicazione backend Node.js/Express.
+│   	├── index.js	#punto di ingresso principale dell'applicazione backend Node.js/Express.
 │   	├── routes/
-│		  │		└── reportRoutes.js	#file nel quale sono contenute le rotte dei report (/reports oppure/reports/:year). In questo modo in futuro se necessario sarà possibile creare nuovi file per ogni "sezione" logica del sito
+│		  │		└── report-routes.js	#file nel quale sono contenute le rotte dei report (/reports oppure/reports/:year). In questo modo in futuro se necessario sarà possibile creare nuovi file per ogni "sezione" logica del sito
 │		  │
-│   	├── controllers/			#Ricevere la richiesta dal client esegue la logica necessaria (es. chiamare il database tramite i model, fare elaborazioni) e restituisce una risposta (JSON, HTML, file, errore...)
-│   	├── models/				#contiene il model della tabella MYSQL dei report. La tabella tuttavia viene creata manualmente dato che in una prima versione non sono previste funzioni di creazione/modifica di dati IN-SITE
-│   	├── utils/					#contiene le funzioni comuni (come invio mail/log...) e evita duplicazione del codice
-│   	├── package.json
-│   	├── REPORTS/ 				#cartella in cui sono presenti i report
-│   	└── node_modules/
+│   	  ├── controllers/			#Ricevuta la richiesta dal client esegue la logica necessaria (chiamare il database) e restituisce una risposta (JSON)
+│   	  ├── utils/				#contiene le funzioni comuni (come invio mail/log...) e evita duplicazione del codice
+│   	  ├── package.json
+│   	  ├── reports/ 				#cartella in cui sono contenuti i reports, nominati secondo l'anno di redazione
+│   	  └── node_modules/
 │
 ├── README.md
 ├── .gitignore

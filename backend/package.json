@@ -7,5 +7,9 @@
     "test": "test"
   },
   "author": "Giuseppe Paolino Caliendo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  }
 }
