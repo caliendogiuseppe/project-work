@@ -282,6 +282,33 @@ footer {
     font-weight: 400; /* 100 - 900 */
 }
 
+
+/* -------------------------------
+   STILI PAGINA DEI DOWNLOAD 
+   DEI REPORT reports.html
+--------------------------------*/
+
+.reports-main {
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+    width: 90%;
+    gap: 2rem;;
+    margin: 5% 5%;
+}
+
+.filters-sidebar {
+    background-color: black;
+    grid-area: 2/1/3/2;
+}
+
+.reports-container {
+    grid-area: 2/2/3/2;
+    background-color: aqua;
+}
+
+
 /* responsive - <=768px */
 @media (max-width: 768px) {
     .navbar {
