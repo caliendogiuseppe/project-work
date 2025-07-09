@@ -1,3 +1,7 @@
+/* -------------------------------
+   STILI GLOBALI
+   NAVBAR + FOOTER
+--------------------------------*/
 html {
   overflow-y: scroll; /* per forzare la scrollbar */
 }
@@ -12,6 +16,11 @@ body {
     padding: 0;
 }
 
+.brown {
+    color: #59200A;
+}
+
+/* STILI NAVBAR */
 .navbar {
     display: flex;
     align-items: center;
@@ -51,142 +60,7 @@ body {
     transform: translateY(-2px); /* leggera elevazione */
 }
 
-.title-section {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 85vh; /* 85% dell'altezza viewport */
-  overflow: hidden;
-}
-
-.title-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /*fa in modo che il video venga ritagliato in modo che occupi il 100% della larghezza della pagina*/
-  z-index: 0;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /*per "annerire" l'overlay (quindi il video)*/
-  z-index: 1;
-}
-
-.title-content {
-    position: absolute;
-    z-index: 2;
-    color: #F7F7F7;
-    text-align: center;
-}
-
-.title-content > h1 {
-    font-weight: 800; /* 100 - 900 */
-    font-style: normal;
-    font-size: 6rem;
-    margin: 0;
-}
-
-.title-content > h2 {
-    font-weight: 700; /* 100 - 900 */
-    font-style: normal;
-    font-size: 3rem;
-}
-
-.title-content > p {
-    font-weight: 500; /* 100 - 900 */
-    font-style: normal;
-    font-size: 1.3rem;
-    margin: 0;
-}
-
-.title-text {
-    display: flex;
-    margin: 50px;
-    padding: 0 6%;  
-}
-
-.title-text--title {
-    min-width: 30%;
-    font-size: 3rem;
-    text-align: center;
-}
-
-.title-text--p {
-    width: auto;
-    padding: 2% 5% 2% 4%;
-    font-size: 1.3rem;
-    font-weight: 350; /* 100 - 900 */
-    border-left: 3px solid #59200A;
-}
-
-.brown {
-    color: #59200A;
-}
-
-.title-cards {
-    display: grid;
-    gap: 2rem;
-    height: 80vh;
-    grid-template-columns: 1fr 2fr 0.6fr 2fr 0.6fr 2fr 1fr;
-    grid-template-rows: 1fr 2.5fr 0.8fr 2.5fr 0.5fr;
-    background-color: #E5C184;
-}
-
-.title-cards--title {
-    grid-area: 1/3/2/6;
-    justify-items: center;
-    text-align: center;
-    font-size: 2rem;
-}
-
-.card {
-    background-color: #d4b06a; 
-    border-radius: 1%;
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1.5px solid #d4b06a;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.first {
-    grid-area: 2/2/5/3;
-}
-
-.second {
-    grid-area: 2/4/5/5;
-}
-
-.third {
-    grid-area: 2/6/5/7;
-}
-
-.card--img {
-    width: 100%;
-    height: 40%;
-    object-fit: cover; /*fa in modo che il video venga ritagliato in modo che occupi il 100% della larghezza della pagina*/
-}
-
-.card--title {
-    font-size: 1.7rem;
-    height: 10%;
-    margin: 8% 0;
-    font-weight: 700; /* 100 - 900 */
-    border-bottom: 1px solid #59200A;
-}
-
-.card--p {
-    height: auto;
-    font-size: 1.3em;
-    text-align: center;
-    font-weight: 400; /* 100 - 900 */
-}
-
+/* STILI FOOTER */
 footer {
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
@@ -269,6 +143,144 @@ footer {
     color: #F7F7F7;
 }
 
+
+/* -------------------------------
+   STILI HOME PAGE index.html
+   NAVBAR + FOOTER
+--------------------------------*/
+
+
+.title-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh; /* 85% dell'altezza viewport */
+  overflow: hidden;
+}
+
+.title-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*fa in modo che il video venga ritagliato in modo che occupi il 100% della larghezza della pagina*/
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /*per "annerire" l'overlay (quindi il video)*/
+  z-index: 1;
+}
+
+.title-content {
+    position: absolute;
+    z-index: 2;
+    color: #F7F7F7;
+    text-align: center;
+}
+
+.title-content > h1 {
+    font-weight: 800; /* 100 - 900 */
+    font-style: normal;
+    font-size: 6rem;
+    margin: 0;
+}
+
+.title-content > h2 {
+    font-weight: 700; /* 100 - 900 */
+    font-style: normal;
+    font-size: 3rem;
+}
+
+.title-content > p {
+    font-weight: 500; /* 100 - 900 */
+    font-style: normal;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.title-text {
+    display: flex;
+    margin: 50px;
+    padding: 0 6%;  
+}
+
+.title-text--title {
+    min-width: 30%;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.title-text--p {
+    width: auto;
+    padding: 2% 5% 2% 4%;
+    font-size: 1.3rem;
+    font-weight: 350; /* 100 - 900 */
+    border-left: 3px solid #59200A;
+}
+
+.title-cards {
+    display: grid;
+    gap: 2rem;
+    height: 80vh;
+    grid-template-columns: 1fr 2fr 0.6fr 2fr 0.6fr 2fr 1fr;
+    grid-template-rows: 1fr 2.5fr 0.8fr 2.5fr 0.5fr;
+    background-color: #E5C184;
+}
+
+.title-cards--title {
+    grid-area: 1/3/2/6;
+    justify-items: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.card {
+    background-color: #d4b06a; 
+    border-radius: 1%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1.5px solid #d4b06a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.first {
+    grid-area: 2/2/5/3;
+}
+
+.second {
+    grid-area: 2/4/5/5;
+}
+
+.third {
+    grid-area: 2/6/5/7;
+}
+
+.card--img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover; /*fa in modo che il video venga ritagliato in modo che occupi il 100% della larghezza della pagina*/
+}
+
+.card--title {
+    font-size: 1.7rem;
+    height: 10%;
+    margin: 8% 0;
+    font-weight: 700; /* 100 - 900 */
+    border-bottom: 1px solid #59200A;
+}
+
+.card--p {
+    height: auto;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 400; /* 100 - 900 */
+}
 
 /* responsive - <=768px */
 @media (max-width: 768px) {

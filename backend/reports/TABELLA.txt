@@ -1,0 +1,134 @@
+| Anno | Produzione Totale (t) | Fatturato Netto (M €) | Dipendenti Totali | Emissioni CO₂ (t) | Consumo Acqua Totale (m³) | Energia Primaria Totale (GJ) | 				GWP (tCO₂eq/t) | ODP (gR11eq/t) | % Energia Rinnovabile | Acque Reflue Trattate (m³) |
+| ---- | --------------------- | --------------------- | ----------------- | ----------------- | ------------------------- | ---------------------------- | 				-------------- | -------------- | --------------------- | -------------------------- |
+| 2009 | ≈950,000              | \~6,204               | 21,372            | 509,902           | n.d.                      | 8,944,974                    | 				0.022          | 0.33           | n.d.                  | n.d.                       |
+| 2010 | ≈970,000              | \~6,606               | 22,400            | 439,616           | n.d.                      | 8,320,842                    | 				0.019          | 0.22           | n.d.                  | n.d.                       |
+| 2011 | ≈990,000              | \~7,218               | 22,850            | 406,680           | n.d.                      | 7,485,874                    | 				0.017          | 0.19           | n.d.                  | n.d.                       |
+| 2012 | ≈1,010,000            | \~7,800               | 22,850            | 392,023           | n.d.                      | 7,301,346                    | 				0.013          | 0.15           | n.d.                  | n.d.                       |
+| 2013 | ≈1,050,000            | \~8,100               | 24,797            | 392,023           | \~7,000,000 (stimato)     | 7,301,346                    | 				0.012          | 0.14           | \~20% (stima)         | n.d.                       |
+| 2014 | ≈1,100,000            | \~8,400               | ≈26,000           | \~389,400 (stima) | \~6,580,000 (stima)       | n.d.                         | 				n.d.           | n.d.           | n.d.                  | n.d.                       |
+| Anno | Produzione Totale (t) | Fatturato Netto (M €) | Dipendenti Totali  | Emissioni CO₂ (t)   | Consumo Acqua (m³)    |
+| ---- | --------------------- | --------------------- | ------------------ | ------------------- | --------------------- |
+| 2015 | 1.207.800             | 9.541,8               | 25.784             | 396.185             | 4.460.000             |
+| 2016 | \~1.290.000           | \~10.200              | 30.132             | 555.702             | \~4.650.000 *(stima)* |
+| 2017 | \~1.350.000           | \~10.500              | \~32.000 *(stima)* | 540.481             | \~4.800.000 *(stima)* |
+| 2018 | \~1.450.000           | \~11.000              | 34.145             | \~520.000 *(stima)* | \~5.000.000 *(stima)* |
+| 2019 | \~1.550.000           | \~11.500              | \~35.500 *(stima)* | \~500.000 *(stima)* | \~5.200.000 *(stima)* |
+| 2020 | 2.042.494             | 12.300                | 36.240             | 505.902             | 5.450.191             |
+| 2021 | \~2.150.000           | 12.700                | 38.767             | \~480.000 *(stima)* | 5.293.591             |
+| 2022 | \~2.200.000           | 14.000                | 41.441             | 478.356             | 5.396.500             |
+| 2023 | \~2.300.000           | 17.000                | 47.212             | \~460.000 *(stima)* | \~5.500.000 *(stima)* |
+
+
+
+
+
+🧱 I report di sostenibilità Ferrero hanno una struttura fissa?
+No, i report non hanno una struttura completamente fissa nel tempo, ma a partire dal 2010 circa iniziano a emergere macro-suddivisioni ricorrenti, che dal 2018 si consolidano in un modello stabile a 4 pilastri. Quindi possiamo distinguere 3 fasi evolutive:
+
+🕰️ Fase 1 – Narrazione tematica e CSR "classica" (2009–2012)
+Struttura modulare, non standardizzata, molto narrativa
+
+Temi trattati: governance, valori aziendali, fondazione Ferrero, diritti umani, attività nelle comunità, ingredienti, ambiente
+
+Indicatori ambientali e sociali sparsi nei capitoli
+
+Focus CSR: “Sharing values to create value”
+
+📌 Suddivisioni tipiche:
+
+Visione e valori aziendali
+
+Comunità locali e iniziative sociali
+
+Dipendenti
+
+Nutrizione e stili di vita
+
+Ingredienti e qualità
+
+Ambiente ed energia
+
+Ferrero Foundation e Social Enterprises
+
+🔄 Fase 2 – Transizione verso struttura a pilastri (2013–2017)
+Introduzione del concetto di "4 pilastri" in via informale (prodotti, fondazione, social enterprise, Kinder+Sport)
+
+Sezioni più leggibili e ripetibili, ma ancora legate ai contenuti narrativi
+
+Indicatori KPI ambientali iniziano ad apparire con più coerenza
+
+📌 Sezioni ricorrenti:
+
+Il Gruppo Ferrero
+
+I nostri prodotti
+
+Dipendenti ("Women and Men")
+
+Agricoltura sostenibile
+
+Impatto ambientale
+
+Ferrero Foundation
+
+Ferrero Social Enterprises
+
+Kinder+Sport
+
+✅ Fase 3 – Struttura standardizzata a 4 pilastri (dal 2018 in poi)
+Dal report 2018 in avanti, Ferrero adotta una struttura dichiarata e ripetibile, basata su quattro pilastri strategici:
+
+I 4 PILASTRI:
+Protect the environment
+➤ CO₂, energia, rifiuti, acqua, packaging, impatto climatico
+
+Source ingredients sustainably
+➤ Cacao, nocciole, palma, zucchero, uova, tracciabilità
+
+Promote responsible consumption
+➤ Nutrizione, sicurezza, porzioni, comunicazione etica
+
+Empower people
+➤ Dipendenti, formazione, diversità, salute e sicurezza, diritti umani
+
+📌 Oltre ai pilastri:
+
+Introduzione del report (lettera CEO, visione)
+
+Governance e materialità
+
+KPI ambientali e sociali
+
+Assurance esterna (PwC/Deloitte)
+
+Indicatori GRI (fino al 2022)
+
+📘 Esempio struttura completa (2022–2023)
+Lettera del CEO
+
+Chi siamo
+
+Catena del valore
+
+Obiettivi di sostenibilità
+
+🔷 Pilastro 1: Proteggere l’ambiente
+
+🔷 Pilastro 2: Ingredienti sostenibili
+
+🔷 Pilastro 3: Consumo responsabile
+
+🔷 Pilastro 4: Valorizzare le persone
+
+Stakeholder e governance
+
+Indicatori chiave (KPI)
+
+Assurance esterna
+
+🧩 Conclusione
+Dal 2009 al 2012: struttura libera, tematica, narrativa
+
+Dal 2013 al 2017: transizione verso format coerente
+
+Dal 2018 al 2023: struttura standard a 4 pilastri, con indicatori chiave integrati e confronto tra anni
