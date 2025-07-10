@@ -290,7 +290,7 @@ footer {
 
 .reports-main {
     display: grid;
-    grid-template-rows: 1fr 8fr;
+    grid-template-rows: 0.5fr 8fr;
     grid-template-columns: 1fr 4fr;
     height: 100vh;
     width: 90%;
@@ -298,10 +298,99 @@ footer {
     margin: 5% 5%;
 }
 
-.filters-sidebar {
-    background-color: black;
-    grid-area: 2/1/3/2;
+.reports-title--container {
+    grid-area: 1/2/2/3;
+    text-align: center;
+    font-size: 1.5rem;
 }
+
+.reports-title--container > h1 {
+    margin: 0;
+}
+
+/* stili SIDEBAR */
+.filters-sidebar {
+    grid-area: 2/1/3/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+
+    background-color: #f7f1e6;     /* Chiaro, in tono con #E5C184 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.filters-sidebar--title {
+    height: 8%;
+    width: 100%;
+    text-align: center;
+}
+
+.year-filter--container {
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    background-color: #e9ddc9
+}
+
+/* stili select*/
+.year-filter--container > select {
+    background-color: #F7F7F7;
+    color: #59200A;
+    border: 2px solid #d4b06a;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.year-filter--container > select:hover,
+.year-filter--container > select:focus {
+    border-color: #59200A;
+    background-color: #e0c58f;
+    outline: none;
+}
+/* end - stili select*/
+
+/* ----OPPURE----*/
+.separator {
+    height: 2%;
+    display: flex;
+    align-items: center;
+    width: 100%;              /* assicura che la linea si estenda */
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;                  /* le linee si espandono */
+    height: 1px;              /* spessore linea */
+    background-color: #59200A;
+}
+
+.separator span {
+    margin: 0 1rem;           /* spazio attorno alla parola */
+    color: #59200A;
+    font-weight: bold;
+    background-color: #f7f1e6;
+    padding: 0 0.5rem;        /* evita che la linea tocchi il testo */
+    z-index: 1;
+}
+/* end ----OPPURE----*/
+
+.numeric-filters--container {
+    height: 70%;
+    width: 100%;
+    text-align: center;
+    
+}
+/* end - stili SIDEBAR */
 
 .reports-container {
     grid-area: 2/2/3/2;

@@ -12,7 +12,7 @@
         <!-- importazione loghi dei social inseriti nel footer-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <title> Ferrero - Sostenibilità</title>
+        <title> Ferrero - Reports</title>
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
@@ -36,15 +36,43 @@
 
         <!-- section reports-MAIN: sezione che contiene i filtri + download dei reports-->
         <section class="reports-main">
+            <div class="reports-title--container">
+                <h1>REPORT DI SOSTENIBILITA'</h1>
+            </div>
             <!-- sidebar dei filtri-->
             <div class="filters-sidebar">
+                <div class="filters-sidebar--title">
+                    <h2>FILTRI</h2>
+                </div>
+
+                <!-- filtro per anno -->
+                <div class="year-filter--container">
+                    <h3>Cerca per anno</h3>
+                    <select name="anno">
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                    </select>
+                </div>
+
+                <div class="separator">
+                    <span>Oppure</span>
+                </div>
+
+                <!-- filtri avanzati -->
+                <div class="numeric-filters--container">
+                    <h3>Filtri avanzati</h3>
+                    <form>
+                        <label for="produzione_totale">Produzione totale (t):</label>
+                        <input type="range" id="produzione_totale" name="produzione_totale" min="950000" max="2300000" >
+                    </form>
+                </div>
 
             </div>
             <!-- contenitore per le schede che conterranno i dettagli e il pulsante per scaricare i report-->
             <div class="reports-container">
                 
             </div>
-
         </section>
 
         <!-- FOOTER -->
