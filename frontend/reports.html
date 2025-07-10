@@ -61,11 +61,31 @@
 
                 <!-- filtri avanzati -->
                 <div class="numeric-filters--container">
-                    <h3>Filtri avanzati</h3>
-                    <form>
+                    <h3 class="filter-title">Filtri avanzati</h3>
+
+                    <!-- produzione totale -->
+                    <div id="total-production--title">
                         <label for="produzione_totale">Produzione totale (t):</label>
-                        <input type="range" id="produzione_totale" name="produzione_totale" min="950000" max="2300000" >
-                    </form>
+                    </div>
+                    <div id="total-production--slider">
+                        <input type="range" id="produzione_totale" name="produzione_totale" min="950000" max="2300000" value="950000" step="10000" oninput="document.getElementById('total-production-out').value = this.value">
+                    </div>
+                    <div id="total-production--label">
+                        <output id="total-production-out">950000</output>
+                    </div>
+
+                    <!-- fatturato netto -->
+                    <div id="net-sales--title">
+                        <label for="fatturato_netto">Fatturato netto (M €):</label>
+                    </div>
+                    <div id="net-sales--slider">
+                        <input type="range" id="fatturato_netto" name="fatturato_netto" min="6200" max="17000" value="6200" step="500" oninput="document.getElementById('net-sales-out').value = this.value">
+                    </div>
+                    <div id="net-sales--label">
+                        <output id="net-sales-out">6204</output>
+                    </div>
+                        
+
                 </div>
 
             </div>
