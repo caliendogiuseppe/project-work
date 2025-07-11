@@ -37,7 +37,7 @@ body {
     background-color: #E5C184;
     color: #59200A;
     font-weight: 700;
-    padding: 0 7%; /* padding 0% in alto e in basso, padding 7% a sinistra e destra*/
+    padding: 0 10%; /* padding 0% in alto e in basso, padding 7% a sinistra e destra*/
 }
 
 .nav-buttons {
@@ -539,7 +539,7 @@ footer {
 /** CONTAINER DEI REPORT CON LE CARD*/
 .reports-container {
     grid-area: 2/2/3/2;
-    background-color: #e4f0e0;
+    background-color: #f0eae1;
 }
 
 
