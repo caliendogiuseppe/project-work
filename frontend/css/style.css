@@ -540,6 +540,86 @@ footer {
 .reports-container {
     grid-area: 2/2/3/2;
     background-color: #f0eae1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5fr 5fr 0.5fr;
+    gap: 2%;
+    padding: 2%;
+}
+
+.report-card {
+    background-color: #e0d5c3;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.report-card--year {
+    height: 15%;
+    margin-bottom: 3%;
+}
+.report-card--year > h2 {
+    margin: 0;
+    font-size: 2.3rem;
+    font-weight: 850;
+}
+
+.report-card--title {
+    height: 12.5%;
+    border-bottom: 1px solid black;
+}
+.report-card--title > h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.report-card--values {
+    height: 62.5%;
+    width: 100%;
+}
+
+/************** display dei valori nella card ***************/
+.report-values-list {
+    list-style: none;
+    padding: 2% 0;
+    margin: 0;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.report-values-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+}
+
+.report-values-list li:last-child {
+  border-bottom: none;
+}
+
+.report-values-list .label {
+  font-weight: 600;
+  color: #59200A;
+}
+
+.report-values-list .value {
+  font-family: 'Courier New', monospace;
+  color: #7a4d2a;
+}
+/************** fine - isplay dei valori nella card ***************/
+
+.report-card--actions {
+    margin-top: 5%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
 
