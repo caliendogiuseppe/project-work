@@ -20,6 +20,14 @@ body {
     color: #59200A;
 }
 
+.light-b {
+    background-color: #d9cbb4;
+}
+
+.h-100 {
+    height: 100%;
+}
+
 /* STILI NAVBAR */
 .navbar {
     display: flex;
@@ -315,7 +323,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3%;
+    gap: 2%;
 
     background-color: #f7f1e6;     /* Chiaro, in tono con #E5C184 */
     padding: 20px;
@@ -329,11 +337,20 @@ footer {
     text-align: center;
 }
 
+.filters-sidebar--title > h2{
+    margin: 0;
+}
+
 .year-filter--container {
     height: 20%;
     width: 100%;
     text-align: center;
     background-color: #e9ddc9;
+    border-radius: 3%;
+}
+
+.year-filter--container > h3 {
+    margin-bottom: 3%;
 }
 
 /* stili select*/
@@ -381,6 +398,7 @@ footer {
     background-color: #f7f1e6;
     padding: 0 0.5rem;        /* evita che la linea tocchi il testo */
     z-index: 1;
+    font-size: 1.5rem;
 }
 /* end ----OPPURE----*/
 
@@ -390,15 +408,24 @@ footer {
     text-align: center;
     background-color: #e9ddc9;
     display: grid;
-    grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
-    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     font-size: 0.8rem;
+    align-items: center;
+    border-radius: 3%;
 }
 /* end - stili SIDEBAR */
 
 /* FILTRI AVANZATI SIDEBAR */
 .filter-title {
     grid-area: 1/1/2/3;
+    font-size: 1.2rem;
+}
+
+.center-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*produzione totale*/
@@ -423,9 +450,96 @@ footer {
     grid-area: 5/2/6/3;
 }
 
+/*emissioni co2*/
+#employees--title {
+    grid-area: 6/1/7/3;
+}
+#employees--slider {
+    grid-area: 7/1/8/2;
+}
+#employees--label {
+    grid-area: 7/2/8/3;
+}
+
+/*emissioni co2*/
+#co2-emissions--title {
+    grid-area: 8/1/9/3;
+}
+#co2-emissions--slider {
+    grid-area: 9/1/10/2;
+}
+#co2-emissions--label {
+    grid-area: 9/2/10/3;
+}
+
+/*econsumo totale di acqua*/
+#water-consumption--title {
+    grid-area: 10/1/11/3;
+}
+#water-consumption--slider {
+    grid-area: 11/1/12/2;
+}
+#water-consumption--label {
+    grid-area: 11/2/12/3;
+}
+
+.filter-label {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.filter-value {
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+/* Contenitore per i bottoni, per gestire spaziatura */
+.filters-actions {
+    grid-area: 12/1/13/3;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0.7rem 0;
+}
+
+/* Bottoni principali */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 150px;
+}
+
+/* Bottone "Applica filtri" – call-to-action principale */
+.btn-apply {
+    background-color: #59200A;      /* Marrone scuro */
+    color: #F7F7F7;
+}
+.btn-apply:hover {
+    background-color: #7a2f11;      /* Leggermente più chiaro */
+    transform: translateY(-2px);
+}
+
+/* Bottone "Reset filtri" – secondario */
+.btn-reset {
+    background-color: #e9ddc9;      /* Beige chiaro */
+    color: #59200A;
+}
+.btn-reset:hover {
+    background-color: #d9cbb4;      /* Beige più scuro */
+    transform: translateY(-2px);
+}
+
+
+
+/** CONTAINER DEI REPORT CON LE CARD*/
 .reports-container {
     grid-area: 2/2/3/2;
-    background-color: aqua;
+    background-color: #e4f0e0;
 }
 
 
