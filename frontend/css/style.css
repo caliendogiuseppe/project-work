@@ -339,6 +339,7 @@ footer {
 
 .filters-sidebar--title > h2{
     margin: 0;
+    font-size: 2rem;
 }
 
 .year-filter--container {
@@ -512,6 +513,7 @@ footer {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
     min-width: 150px;
+    border:1px solid #59200A;
 }
 
 /* Bottone "Applica filtri" – call-to-action principale */

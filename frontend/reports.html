@@ -12,6 +12,9 @@
         <!-- importazione loghi dei social inseriti nel footer-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <!-- chiamate API al backend -->
+        <script src="./js/fetch-all-reports.js" defer></script>
+
         <title> Ferrero - Reports</title>
         <link rel="stylesheet" href="./css/style.css">
     </head>
@@ -126,8 +129,11 @@
                 </div>
 
             </div>
-            <!-- contenitore per le schede che conterranno i dettagli e il pulsante per scaricare i report-->
-            <div class="reports-container">
+            <!-- contenitore per le schede che conterranno i dettagli e il pulsante per scaricare i report. In questo contenitore sono destinate 6 card (quindi 6 report)-->
+            <div class="reports-container" id="reports-container">
+
+                <!-- card contenente le informazioni dei report e i pulsanti per visualizzare e scaricare-->
+                <!--
                 <div class="report-card">
                     <div class="report-card--year">
                         <h2>2009</h2>
@@ -149,7 +155,7 @@
 
                     <div class="report-card--actions">
                         
-                        <!-- svg per visualizzare-->
+                        svg per visualizzare
                         <a href="#">
                             <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -157,7 +163,7 @@
                             </svg>
                         </a>
                         
-                        <!-- link per scaricare-->
+                        link per scaricare
                         <a href="#">
                             <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z" fill="#1C274C"/>
@@ -166,10 +172,8 @@
                         </a>
 
                     </div>
-                </div>
-                <div class="report-card">
-                    blablabla
-                </div>
+                </div> -->
+
             </div>
         </section>
 
