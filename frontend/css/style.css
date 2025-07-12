@@ -619,7 +619,6 @@ footer {
   font-family: 'Courier New', monospace;
   color: #7a4d2a;
 }
-/************** fine - isplay dei valori nella card ***************/
 
 .report-card--actions {
     margin-top: 5%;
@@ -628,6 +627,21 @@ footer {
     justify-content: space-around;
     align-items: flex-end;
 }
+/************** fine - display dei valori nella card ***************/
+
+/************** pulsanti per l'impaginazione ***************/
+.pagination-links--container {
+    grid-area: 3/2/4/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pagination-links--container h4 {
+    margin: 0;
+}
+/************** fine - pulsanti per l'impaginazione ***************/
+
 
 
 /* responsive - <=768px */
