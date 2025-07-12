@@ -68,6 +68,11 @@ body {
     transform: translateY(-2px); /* leggera elevazione */
 }
 
+.on-page {
+    background-color: #F7F7F7; /* colore di sfondo in hover */
+   
+}
+
 /* STILI FOOTER */
 footer {
     display: grid;
