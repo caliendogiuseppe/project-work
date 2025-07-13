@@ -7,34 +7,35 @@ Project work - website for the download of sustainability reports
 │
 ├── frontend/
 │		│
-│		├── index.html               # Home page CON OVERVIEW AZIENDA FERRERO
-│		├── obiettivi.html           # (da capire) Pagina "Obiettivi per la sostenibilità" con impegno sulla sostenibilità
-│		├── download.html            # (da capire) Pagina per il download dei report
+│		├── index.html               #  Home page CON OVERVIEW AZIENDA FERRERO
+│		├── sostenibilita.html       #  Pagina "Obiettivi per la sostenibilità" con impegno sulla sostenibilità
+│		├── reports.html             #  Pagina per il download e il filtraggio dei report
 │		│
 │		├── css/
-│		│   ├── styles.css           # CSS globale per tutte le pagine
-│		│   └── obiettivi.css        # (opzionale) stili specifici per la pagina obiettivi
+│		│   └── style.css           # CSS globale per tutte le pagine
+│		│   
 │		│
 │		├── js/
-│		│   └── scripts.js           # JS globale (se serve)
+│		│   └── fetch-all-reports.js           # codice Javascript che esegue la chiamata API al backend per estrapolare le informazioni di tutti i report
 │		│
 │		└── assets/
-│				├── images/              # Immagini usate nel sito
-│	    		├── fonts/               # (da capire)Font custom (se presenti)
-│	    		└── downloads/           # PDF o altri file per il download
+│				├── img/              # Immagini statiche usate nel sito
+│	    		└── videos/           # Video statici usati nel sito
+│	    		
 │	    	 
 │
 ├── backend/
-│   	├── index.js	#punto di ingresso principale dell'applicazione backend Node.js/Express.
+│   	├── index.js	                    # punto di ingresso principale dell'applicazione backend Node.js/Express.
 │   	├── routes/
-│		  │		└── report-routes.js	#file nel quale sono contenute le rotte dei report (/reports oppure/reports/:year). In questo modo in futuro se necessario sarà possibile creare nuovi file per ogni "sezione" logica del sito
-│		  │
-│   	  ├── controllers/			#Ricevuta la richiesta dal client esegue la logica necessaria (chiamare il database) e restituisce una risposta (JSON)
-│   	  ├── utils/				#contiene le funzioni comuni (come invio mail/log...) e evita duplicazione del codice
-│   	  ├── package.json
-│   	  ├── reports/ 				#cartella in cui sono contenuti i reports, nominati secondo l'anno di redazione
-│   	  └── node_modules/
+│		│		└── report-routes.js	    # file nel quale sono contenute le rotte destinate alla gestione/estrapolazione dei report
+│		│
+│   	├── controllers/			        # i controller necessari contenenti la logica computazionale che viene eseguita quando viene ricevuta una richiesta
+|       |      └── report-controller.js 
+│   	├── utils/				            # contiene le funzioni comuni e evita duplicazione del codice
+│       │      └── db.js                    # file per la gestione della connessione e interazione backend-db
+│   	├── package.json
+│   	├── reports/ 				        # cartella in cui sono contenuti i reports, nominati secondo l'anno di redazione
+│   	└── node_modules/
 │
 ├── README.md
-├── .gitignore
-└── package.json (opzionale, se vuoi un root per comandi comuni)
+└── .gitignore
