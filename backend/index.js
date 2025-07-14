@@ -13,6 +13,8 @@ app.use(cors()); //consente tutte le origini
 app.use('/api/reports', reportRoutes) 
 
 // riga di codice per servire i file statici, ossia i report in formato .pdf presenti nella cartella 'reports' saranno accessibili da http://{host}/public/nomefile.pdf
+
+
 app.use('/public', express.static('./reports/'));
 
 //inizializzazione del server in ascolto sulla porta 3000
