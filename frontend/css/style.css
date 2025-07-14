@@ -281,7 +281,7 @@ footer {
 }
 
 .card--title {
-    font-size: 1.7rem;
+    font-size: 1.4em;
     height: 10%;
     margin: 8% 0;
     font-weight: 700; /* 100 - 900 */
@@ -290,7 +290,7 @@ footer {
 
 .card--p {
     height: auto;
-    font-size: 1.3em;
+    font-size: clamp(1em, 1.2em, 1.3em);
     text-align: center;
     font-weight: 400; /* 100 - 900 */
 }
