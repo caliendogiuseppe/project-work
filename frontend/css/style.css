@@ -238,10 +238,11 @@ footer {
 .title-cards {
     display: grid;
     gap: 2rem;
-    height: 80vh;
+    height: auto;
     grid-template-columns: 1fr 2fr 0.2fr 2fr 0.2fr 2fr 1fr;
-    grid-template-rows: 1fr 2.5fr 0.8fr 2.5fr 0.5fr;
+    grid-template-rows: 1fr 2fr;
     background-color: #E5C184;
+    padding: 5% 0;
 }
 
 .title-cards--title {
@@ -263,15 +264,15 @@ footer {
 }
 
 .first {
-    grid-area: 2/2/5/3;
+    grid-area: 2/2/3/3;
 }
 
 .second {
-    grid-area: 2/4/5/5;
+    grid-area: 2/4/3/5;
 }
 
 .third {
-    grid-area: 2/6/5/7;
+    grid-area: 2/6/3/7;
 }
 
 .card--img {
