@@ -294,6 +294,7 @@ footer {
     font-size: clamp(1em, 1.2em, 1.3em);
     text-align: center;
     font-weight: 400; /* 100 - 900 */
+    margin: 0;
 }
 
 
