@@ -646,6 +646,11 @@ footer {
 
 .pagination-links--container h4 {
     margin: 0;
+    font-weight: 400;
+}
+
+#h4-current-page {
+    font-weight: 900;
 }
 /************** fine - pulsanti per l'impaginazione ***************/
 

@@ -103,15 +103,17 @@ const renderAndPaginateReports = () => {
         }  
     }
 
-    let nPages
+    let onCurrentPageId
     const paginationLinksContainer = document.createElement('div'); 
     paginationLinksContainer.className = 'pagination-links--container'; 
     paginationLinksContainer.id = 'pagination-links--container';
     paginationLinksContainer.innerHTML = `
         <a href="" onclick="previousPage(); return false;"> <h4> < </h4> </a> `;
     
+    
     for (item of formattedArray) {
-        paginationLinksContainer.innerHTML += `<a href="" onclick="changePage(${item.page}); return false;" > <h4> ${item.page} </h4> </a> `;
+        item.page == currentPage ? onCurrentPageId = ` id = "h4-current-page"` : onCurrentPageId = ``
+        paginationLinksContainer.innerHTML += `<a href="" onclick="changePage(${item.page}); return false;" > <h4 ${onCurrentPageId}> ${item.page} </h4> </a> `;
     }
 
     paginationLinksContainer.innerHTML += `<a href="" onclick="nextPage(); return false;"> <h4> > </h4> </a>`
@@ -121,13 +123,19 @@ const renderAndPaginateReports = () => {
 
 // funzione per andare alla pagina successiva
 const nextPage = () => {
-    currentPage ++;
+    if (currentPage < formattedArray.length) {
+        currentPage ++;
+    }
+    
     renderAndPaginateReports()
 }
 
 // funzione per andare alla pagina precedente
 const previousPage = () => {
-    currentPage --;
+    if (currentPage > 1) {
+        currentPage --;
+    }
+
     renderAndPaginateReports()
 }
 
