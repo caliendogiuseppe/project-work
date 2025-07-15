@@ -103,18 +103,29 @@ const renderAndPaginateReports = () => {
         }  
     }
 
+    let nPages
     const paginationLinksContainer = document.createElement('div'); 
     paginationLinksContainer.className = 'pagination-links--container'; 
     paginationLinksContainer.id = 'pagination-links--container';
     paginationLinksContainer.innerHTML = `
-        <a href="" > <h4> < </h4> </a>
-        <a href="" onclick="nextPage(); return false;"> <h4> > </h4> </a>
-    `
+        <a href="" > <h4> < </h4> </a> `;
+    
+    for (item of formattedArray) {
+        paginationLinksContainer.innerHTML += `<a href="" onclick="changePage(${item.page}); return false;" > <h4> ${item.page} </h4> </a> `;
+    }
+
+    paginationLinksContainer.innerHTML += `<a href="" onclick="nextPage(); return false;"> <h4> > </h4> </a>`
 
     container.appendChild(paginationLinksContainer)
 }
 
 const nextPage = () => {
     currentPage ++;
+    renderAndPaginateReports()
+}
+
+const changePage = (page) => {
+    console.log(page)
+    currentPage = page;
     renderAndPaginateReports()
 }
