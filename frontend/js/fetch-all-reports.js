@@ -124,8 +124,7 @@ const nextPage = () => {
     renderAndPaginateReports()
 }
 
-const changePage = (page) => {
-    console.log(page)
+const changePage = (page = 1) => {
     currentPage = page;
     renderAndPaginateReports()
 }
