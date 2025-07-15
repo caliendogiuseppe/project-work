@@ -108,7 +108,7 @@ const renderAndPaginateReports = () => {
     paginationLinksContainer.className = 'pagination-links--container'; 
     paginationLinksContainer.id = 'pagination-links--container';
     paginationLinksContainer.innerHTML = `
-        <a href="" > <h4> < </h4> </a> `;
+        <a href="" onclick="previousPage(); return false;"> <h4> < </h4> </a> `;
     
     for (item of formattedArray) {
         paginationLinksContainer.innerHTML += `<a href="" onclick="changePage(${item.page}); return false;" > <h4> ${item.page} </h4> </a> `;
@@ -119,11 +119,19 @@ const renderAndPaginateReports = () => {
     container.appendChild(paginationLinksContainer)
 }
 
+// funzione per andare alla pagina successiva
 const nextPage = () => {
     currentPage ++;
     renderAndPaginateReports()
 }
 
+// funzione per andare alla pagina precedente
+const previousPage = () => {
+    currentPage --;
+    renderAndPaginateReports()
+}
+
+// funzione per andare alla pagina passata come parametro (viene utilizzata al click sui numeri dell'impaginazione)
 const changePage = (page = 1) => {
     currentPage = page;
     renderAndPaginateReports()
