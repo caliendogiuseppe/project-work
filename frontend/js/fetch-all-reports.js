@@ -5,7 +5,7 @@ const FETCH_ALL_URL = "/api/reports/"
 document.addEventListener("DOMContentLoaded", async () => {
     const data = await fetchReports();
     formatArrayForPagination(data.data) //funzione di reports-pagination.js
-
+    displayDatesInFilter(data.data)
     renderAndPaginateReports() //array di oggetti, funzione di reports-pagination.js
 });
 
@@ -21,5 +21,14 @@ const fetchReports = async () => {
         return json;
     } catch (error) {
         console.error(error.message);
+    }
+}
+
+const displayDatesInFilter = (data) => {
+    const container = document.getElementById('reports--select-anno'); // 1- trovo il container dall'id 
+    container.innerHTML = ''; //2- lo svuoto di tutto
+
+    for (report of data) {
+        container.innerHTML += `<option value="${report.anno}"> ${report.anno} </option>`
     }
 }
