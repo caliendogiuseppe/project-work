@@ -7,10 +7,12 @@ const FETCH_BY_YEAR_URL = "/api/reports/"
 const selectedYear = document.getElementById("reports--select-anno");
 
 // all'evento di change del filtro dell'anno faccio partire la chiamata API per il filtro
-selectedYear.addEventListener("change", function ()  {
+selectedYear.addEventListener("change", async function ()  {
     const selectedYear = this.value
     
-    filterByYear(year)
+    const data = await filterByYear(selectedYear)
+    formatArrayForPagination(data.data) //funzione di reports-pagination.js
+    renderAndPaginateReports() //array di oggetti, funzione di reports-pagination.js
 })
 
 // filtro in base all'anno: mostro i risultati degli anni nell option del filtro in basee agli anni presenti nel db

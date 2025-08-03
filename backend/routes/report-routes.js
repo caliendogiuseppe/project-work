@@ -2,10 +2,16 @@ const express = require('express')
 const router = express.Router()
 const reportController = require('../controllers/report-controller')
 
-//rotta che, dopo aver recuperato grazie al controller 'report-controller.js' tutti i dati di tutti i report, li restituisce
+//rotta che, dopo aver recuperato grazie al controller 'report-controller.js' i dati di tutti i report, li restituisce
 router.get('/', async (req, res) => {
     const reports = await reportController.getAllInfo()
     res.send( { data: reports, status: 200} )
+})
+
+//rotta che, dopo aver recuperato grazie al controller 'report-controller.js' i dati di tutti i report filtrati per anno, li restituisce
+router.get('/:year', async (req, res) => {
+    const report = await reportController.filterByYear(req.params.year)
+    res.send( { data: report, status: 200} )
 })
 
 //export dela costante 'router' in modo che sia visibile all'interno di index.js

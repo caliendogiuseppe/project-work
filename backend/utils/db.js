@@ -23,7 +23,6 @@ const createConnection = async () => {
             description: err
         }
     }
-    
 }
 
 // funzione per eseguire le query inviate come parametro e restituirle
@@ -33,6 +32,12 @@ const executeQuery = async (conn, query) => {
     return result
 }   
 
+const endConnection = async (connection) => {
+    connection.end()
+}
+
 module.exports = {
-    createConnection, executeQuery
+    createConnection, 
+    executeQuery,
+    endConnection
 };
