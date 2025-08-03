@@ -1,5 +1,5 @@
 const mysql = require('mysql2/promise');
-const HOST = 'localhost'
+const DB_HOST = 'localhost'
 const USER = 'root'
 const DB = 'ferrero'
 
@@ -7,7 +7,7 @@ const DB = 'ferrero'
 const createConnection = async () => {
     try {
         const connection = await mysql.createConnection({
-            host: HOST,
+            host: DB_HOST,
             user: USER,
             database: DB,
             password: 'root',

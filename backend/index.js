@@ -1,6 +1,7 @@
 const express = require('express')
 const reportRoutes = require('./routes/report-routes') //utilizzo questa variabile per distinguere la logica del server da quella delle routes
 const cors = require('cors')
+const path = require('path')
 const app = express()
 const port = 3000
 
@@ -13,9 +14,19 @@ app.use(cors()); //consente tutte le origini
 app.use('/api/reports', reportRoutes) 
 
 // riga di codice per servire i file statici, ossia i report in formato .pdf presenti nella cartella 'reports' saranno accessibili da http://{host}/public/nomefile.pdf
-
-
 app.use('/public', express.static('./reports/'));
+
+//rotta che consente di scaricare direttamente il file invece di aprirlo inline
+app.get('/download/:filename', async (req, res) => {
+    const filename = req.params.filename;
+    const filePath = path.join(__dirname, 'reports', filename);
+    res.download(filePath, filename, (err) => {
+        if (err) {
+            console.error('Errore nel download:', err);
+            res.sendStatus(500);
+        }
+    });
+})
 
 //inizializzazione del server in ascolto sulla porta 3000
 app.listen(port, () => {
