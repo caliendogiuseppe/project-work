@@ -1,5 +1,3 @@
-const FETCH_BY_YEAR_URL = "/api/reports/"
-
 /**
  * FILTRO IN BASE ALL'ANNO
  */
@@ -28,7 +26,7 @@ const displayYearsInFilter = (data) => {
 // funzione che effettua la chiamata API per filtrare i report in base all'anno
 const filterByYear = async (year) => {
     try {
-        const response = await fetch(HOST + FETCH_BY_YEAR_URL + year);
+        const response = await fetch(CONFIG.HOST + CONFIG.API_REPORTS_URL + year);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }

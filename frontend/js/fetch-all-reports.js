@@ -1,6 +1,3 @@
-const HOST = "http://localhost:3000"
-const FETCH_ALL_URL = "/api/reports/"
-
 // 1. Al caricamento del DOM, esegue la fetch
 document.addEventListener("DOMContentLoaded", async () => {
     const data = await fetchReports();
@@ -12,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 // chiamata di fecthAll verso il backend
 const fetchReports = async () => {
     try {
-        const response = await fetch(HOST + FETCH_ALL_URL);
+        const response = await fetch(CONFIG.HOST + CONFIG.API_REPORTS_URL);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
