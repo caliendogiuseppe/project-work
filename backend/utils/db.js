@@ -17,7 +17,7 @@ const createConnection = async () => {
         return connection
 
     } catch(err) {
-        console.log(err)
+        console.log("errore di connessione lol " + err)
         return {
             error: 500,
             description: err
