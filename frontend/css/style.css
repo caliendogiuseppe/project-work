@@ -655,6 +655,82 @@ footer {
 /************** fine - pulsanti per l'impaginazione ***************/
 
 
+/* -------------------------------
+   STILI PAGINA DELLA SOSTENIBILITA' 
+   sostenibilita.html
+--------------------------------*/
+
+.sustainability--title-subtitle {
+    background-color: #f4ede4;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sustainability--title {
+    height: auto;
+    font-size: 1.5rem;
+    padding: 2%;
+    margin-top: 2%;
+    border-bottom: 1px solid black;
+}
+
+.sustainability--title > h1 {
+    margin: 0;
+    color: #59200A;
+}
+
+.sustainability--subtitle {
+    height: 70%;
+    padding: 2% 7%;
+    text-align: center;
+}
+
+.sustainability--subtitle > h3 {
+    font-weight: 400; /* 100 - 900 */
+}
+
+
+.vision {
+  background-color: #F5F5DC;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 3rem 4rem;
+  gap: 15px;
+}
+
+.vision-text {
+    width: 45%;
+}
+
+.vision-text > h2 {
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vision-text > p {
+  color: #333333;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.vision-img {
+    width: 55%;
+    margin: 0 5%;
+}
+
+.vision-img > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
 
 /* responsive - <=768px */
 @media (max-width: 768px) {
@@ -702,6 +778,29 @@ footer {
 
     .card--title {
         font-size: 3rem;
+    }
+
+    /* pagina sostenibilità */
+    .vision {
+        background-color: #F5F5DC;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        padding: 5%;
+        gap: 15px;
+    }
+
+    .vision-text {
+        width: 100%;
+    }
+
+    .vision-text > h2 {
+        text-align: center;
+    }
+
+    .vision-img {
+        width: 100%;
     }
 
     footer {
