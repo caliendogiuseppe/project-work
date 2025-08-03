@@ -5,7 +5,7 @@ const FETCH_ALL_URL = "/api/reports/"
 document.addEventListener("DOMContentLoaded", async () => {
     const data = await fetchReports();
     formatArrayForPagination(data.data) //funzione di reports-pagination.js
-    displayYearsInFilter(data.data)
+    displayYearsInFilter(data.data) // funzione che mostra nel filtro degli anni, tutti gli anni presi dal db
     renderAndPaginateReports() //array di oggetti, funzione di reports-pagination.js
 });
 
