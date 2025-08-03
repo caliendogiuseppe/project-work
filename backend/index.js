@@ -3,7 +3,7 @@ const reportRoutes = require('./routes/report-routes') //utilizzo questa variabi
 const cors = require('cors')
 const path = require('path')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000;
 
 app.use(cors()); //consente tutte le origini
 // oppure specifica solo per il tuo frontend:
@@ -30,5 +30,5 @@ app.get('/download/:filename', async (req, res) => {
 
 //inizializzazione del server in ascolto sulla porta 3000
 app.listen(port, () => {
-    console.log('Server in ascolto sulla porta 3000 -> http://localhost:3000')
+    console.log(`Server in ascolto sulla porta ${port}`)
 })
