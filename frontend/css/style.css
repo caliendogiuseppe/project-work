@@ -787,14 +787,14 @@ footer {
   list-style-type: disc;
   padding-left: 1.5rem;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
 .guida-report p {
   line-height: 1.7;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -813,7 +813,7 @@ footer {
 }
 
 .sezione-finale p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   max-width: 700px;
   margin: 0 auto 2rem;
