@@ -1,17 +1,15 @@
 const mysql = require('mysql2/promise');
-const DB_HOST = 'localhost'
-const USER = 'root'
-const DB = 'ferrero'
+require('dotenv').config()
 
 // funzione per creare la connessione al db e restituire l'istanza della connessione
 const createConnection = async () => {
     try {
         const connection = await mysql.createConnection({
-            host: DB_HOST,
-            user: USER,
-            database: DB,
-            password: 'root',
-            port: 3306
+            host: process.env.DB_HOST,
+            user: process.env.DB_USER,
+            database: process.env.DB,
+            password: process.env.DB_PASSWORD,
+            port: process.env.DB_PORT || 3306
         });
 
         return connection
