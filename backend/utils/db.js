@@ -4,8 +4,6 @@ require('dotenv').config()
 // funzione per creare la connessione al db e restituire l'istanza della connessione
 const createConnection = async () => {
     try {
-
-        console.log('TEST -> ', process.env.DB)
         const connection = await mysql.createConnection({
             host: process.env.DB_HOST,
             user: process.env.DB_USER,

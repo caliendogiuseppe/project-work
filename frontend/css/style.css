@@ -926,6 +926,21 @@ footer {
         width: 100%;
     }
 
+    /* pagina reports */
+    .year-filter--container {
+        height: auto;
+        padding-bottom: 8%;
+    }
+
+    .separator {
+        height: 10vh;
+        display: flex;
+    }
+
+    .btn {
+        width: 40%;
+    }
+
     .reports-main {
         display: flex;
         flex-direction: column;
@@ -935,11 +950,18 @@ footer {
         display: flex;
         background-color: #f0eae1;
         flex-direction: column;
-        gap: 2%;
-        padding: 2%;
-        width: 70%;
+        padding: 4%;
     }
 
+    .report-card {
+        margin: 8% 5%;
+    }
+
+    .pagination-links--container {
+        height: 10vh;
+    }
+
+    /* footer*/
     footer {
         height: auto;
         display: flex;
