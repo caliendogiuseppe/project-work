@@ -879,6 +879,10 @@ footer {
         height: auto; /* utile per far crescere in altezza */
     }
 
+    .title-cards--title {
+        padding: 0 8%;
+    }
+
     .card--title {
         font-size: 3rem;
     }
