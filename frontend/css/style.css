@@ -661,7 +661,6 @@ footer {
 --------------------------------*/
 
 .sustainability--title-subtitle {
-    background-color: #f4ede4;
     height: 40vh;
     width: 100%;
     display: flex;
@@ -695,7 +694,7 @@ footer {
 
 
 .vision {
-  background-color: #F5F5DC;
+  background-color: #E2F3E3;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -731,6 +730,110 @@ footer {
     display: block;
     object-fit: cover;
 }
+
+.pillars {
+  background-color: #F0F9F1;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.pillars h2 {
+  color: #4CAF50;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2% 7%;
+}
+
+.pillar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.pillar h3 {
+  color: #4CAF50;
+  margin-bottom: 0.5rem;
+}
+
+.guida-report {
+  background-color: #E2F3E3; /* verde chiaro coerente */
+  padding: 3rem 1rem;
+  color: #333;
+}
+
+.guida-report .container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.guida-report h2 {
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.guida-report h3 {
+  margin-top: 2rem;
+  color: #388E3C;
+}
+
+.guida-report ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.guida-report p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+
+.sezione-finale {
+  padding: 3rem 1rem;
+  padding-bottom: 0;
+  text-align: center;
+  color: #333;
+}
+
+.sezione-finale h2 {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.sezione-finale p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.btn-cta {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: #388E3C;
+}
+
 
 /* responsive - <=768px */
 @media (max-width: 768px) {
@@ -787,7 +890,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-items: center;
-        padding: 5%;
+        padding: 5% 10%;
         gap: 15px;
     }
 
