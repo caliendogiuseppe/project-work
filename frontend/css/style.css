@@ -894,6 +894,26 @@ footer {
         gap: 15px;
     }
 
+    .sustainability--title-subtitle {
+        height: 60vh;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sustainability--subtitle {
+        height: auto;
+        padding: 2% 7%;
+        text-align: center;
+    }
+
+    .guida-report {
+        text-align: justify;
+    }
+
+    .guida-report h2, h3{
+        text-align: center;
+    }
+
     .vision-text {
         width: 100%;
     }
