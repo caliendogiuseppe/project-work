@@ -926,6 +926,20 @@ footer {
         width: 100%;
     }
 
+    .reports-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reports-container {
+        display: flex;
+        background-color: #f0eae1;
+        flex-direction: column;
+        gap: 2%;
+        padding: 2%;
+        width: 70%;
+    }
+
     footer {
         height: auto;
         display: flex;
