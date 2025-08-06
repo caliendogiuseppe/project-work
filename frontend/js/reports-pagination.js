@@ -133,7 +133,21 @@ const changePage = (page = 1) => {
 }
 
 const appendNumberOfResults = () => {
-    return numberOfResults > 1 ? `<h4>${numberOfResults} reports trovati</h4>` : `<h4>${numberOfResults} report trovato</h4>`
+    let resultsUpToCurrentPage = 0
+    let beginOfPage = 1
+
+    for (i = 0; i < currentPage; i++) {
+        resultsUpToCurrentPage += formattedArray[i].items.length
+    }
+
+    for (i = 0; i < currentPage-1; i++) {
+        console.log(formattedArray[i])
+        beginOfPage += formattedArray[i].items.length
+    }
+
+    beginOfPage + 1
+
+    return numberOfResults > 1 ? `<h5>${beginOfPage} - ${resultsUpToCurrentPage} di ${numberOfResults} reports totali</h5>` : `<h5>${beginOfPage} - ${resultsUpToCurrentPage} di ${numberOfResults} report totale</h5>`
 }
 
 window.formatArrayForPagination = formatArrayForPagination;
