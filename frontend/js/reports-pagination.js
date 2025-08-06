@@ -133,7 +133,7 @@ const changePage = (page = 1) => {
 }
 
 const appendNumberOfResults = () => {
-    return `<h4>${numberOfResults} reports trovati</h4>`
+    return numberOfResults > 1 ? `<h4>${numberOfResults} reports trovati</h4>` : `<h4>${numberOfResults} report trovato</h4>`
 }
 
 window.formatArrayForPagination = formatArrayForPagination;
