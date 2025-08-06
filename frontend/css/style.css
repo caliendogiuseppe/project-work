@@ -649,6 +649,10 @@ footer {
     font-weight: 400;
 }
 
+.number-of-results--container {
+    grid-area: 3/1/4/2;
+}
+
 #h4-current-page {
     font-weight: 900;
 }

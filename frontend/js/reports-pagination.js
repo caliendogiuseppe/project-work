@@ -1,7 +1,9 @@
 let currentPage = 1
 let formattedArray = []
+let numberOfResults = 0
 
 const formatArrayForPagination = (data) => {
+    numberOfResults = data.length
     let actualPage = 1;
     const elementsPerPage = 6;
 
@@ -79,6 +81,15 @@ const renderAndPaginateReports = () => {
         }  
     }
 
+    ///////test
+    const numberOfResultsContainer = document.createElement('div'); 
+    numberOfResultsContainer.className = 'number-of-results--container'; 
+    numberOfResultsContainer.id = 'number-of-results--container';
+    numberOfResultsContainer.innerHTML = appendNumberOfResults()
+
+    container.appendChild(numberOfResultsContainer)
+    ///////test
+
     let onCurrentPageId
     const paginationLinksContainer = document.createElement('div'); 
     paginationLinksContainer.className = 'pagination-links--container'; 
@@ -119,6 +130,10 @@ const previousPage = () => {
 const changePage = (page = 1) => {
     currentPage = page;
     renderAndPaginateReports()
+}
+
+const appendNumberOfResults = () => {
+    return `<h4>${numberOfResults} reports trovati</h4>`
 }
 
 window.formatArrayForPagination = formatArrayForPagination;
