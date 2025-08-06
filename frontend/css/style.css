@@ -561,6 +561,11 @@ footer {
     padding: 2%;
 }
 
+.no-reports-found {
+    grid-area: 2/2/3/3;
+    text-align: center;
+}
+
 .report-card {
     background-color: #e0d5c3;
     border-radius: 5%;

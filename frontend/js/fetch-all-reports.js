@@ -18,5 +18,11 @@ const fetchReports = async () => {
         return json;
     } catch (error) {
         console.error(error.message);
+
+        return {
+            "result": -1,
+            "error": error.message,
+            "data": []
+        }
     }
 }
