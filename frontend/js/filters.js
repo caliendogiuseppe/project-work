@@ -58,14 +58,33 @@ filterClick.addEventListener("click", async function () {
     const waterConsumption = document.getElementById("consumo-acqua").value;
 
     const payload = {
-        total_production: totalProduction,
+        /*total_production: totalProduction,
         net_sales: netSales,
         employees: employees,
         co2_emissions: co2Emissions,
-        water_consumption: waterConsumption
+        water_consumption: waterConsumption*/
     }
 
-    const data = await advancedFiltersAPI(payload)
+    const totalProductionIsMoved = isSliderMoved(document.getElementById("produzione_totale"))
+    totalProductionIsMoved ? payload.total_production = totalProduction : ''
+
+    const netSalesIsMoved = isSliderMoved(document.getElementById("fatturato_netto"))
+    netSalesIsMoved ? payload.net_sales = netSales : ''
+
+    const emmployeesIsMoved = isSliderMoved(document.getElementById("dipendenti"))
+    emmployeesIsMoved ? payload.employees = employees : ''
+
+    const co2EmissionsIsMoved = isSliderMoved(document.getElementById("emissioni-co2"))
+    co2EmissionsIsMoved ? payload.co2_emissions = co2Emissions : ''
+
+    const waterConsumptionIsMoved = isSliderMoved(document.getElementById("consumo-acqua"))
+    waterConsumptionIsMoved ? payload.water_consumption = waterConsumption : ''
+
+    console.log(payload)
+    if (totalProductionIsMoved || netSalesIsMoved || emmployeesIsMoved || co2EmissionsIsMoved || waterConsumptionIsMoved) {
+        const data = await advancedFiltersAPI(payload)
+    }
+    
 });
 
 const advancedFiltersAPI = async (payload) => {
@@ -84,6 +103,7 @@ const advancedFiltersAPI = async (payload) => {
         }
 
         const json = await response.json();
+        console.log(json)
         return json;
     } catch (error) {
         console.error(error.message);
@@ -93,4 +113,9 @@ const advancedFiltersAPI = async (payload) => {
             "data": []
         }
     }
+}
+
+// funzione per controllare se lo slider è stato mosso
+function isSliderMoved(slider) {
+    return slider.value !== slider.min;
 }

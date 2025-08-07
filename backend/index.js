@@ -6,8 +6,9 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 app.use(cors()); //consente tutte le origini
-// oppure specifica solo per il tuo frontend:
 // app.use(cors({ origin: 'http://localhost:5500' }))
+
+app.use(express.json()); // fondamentale per il parsing del body delle richieste in POST
 
 
 //quando l'app riceve una richiesta https col prefisso '/reports', reindirizza la richiesta al gestore di rotte 'report-routes'

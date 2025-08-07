@@ -14,5 +14,11 @@ router.get('/:year', async (req, res) => {
     res.send( { data: report, status: 200} )
 })
 
+//rotta che restituisce i report in base ai filtri avanzati (POST)
+router.post('/filters', async (req, res) => {
+    const reports = await reportController.advancedFilters(req.body)
+    res.send( { data: reports, status: 200} )
+})
+
 //export dela costante 'router' in modo che sia visibile all'interno di index.js
 module.exports = router
