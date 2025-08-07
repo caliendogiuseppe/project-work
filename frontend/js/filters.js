@@ -35,11 +35,62 @@ const filterByYear = async (year) => {
         return json;
     } catch (error) {
         console.error(error.message);
+        return {
+            "result": -1,
+            "error": error.message,
+            "data": []
+        }   
     }
 }
-
 
 
 /**
  * FILTRI AVANZATI
  */
+// seleziona il bottone di 'applica-filtri' identificato dall'id "btn-apply"
+const filterClick = document.getElementById("btn-apply");
+
+filterClick.addEventListener("click", async function () {
+    const totalProduction = document.getElementById("produzione_totale").value;
+    const netSales = document.getElementById("fatturato_netto").value;
+    const employees = document.getElementById("dipendenti").value;
+    const co2Emissions = document.getElementById("emissioni-co2").value;
+    const waterConsumption = document.getElementById("consumo-acqua").value;
+
+    const payload = {
+        total_production: totalProduction,
+        net_sales: netSales,
+        employees: employees,
+        co2_emissions: co2Emissions,
+        water_consumption: waterConsumption
+    }
+
+    const data = await advancedFiltersAPI(payload)
+});
+
+const advancedFiltersAPI = async (payload) => {
+    try {
+        const response = await fetch(CONFIG.HOST + CONFIG.ADVANCED_FILTERS_URL, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        return json;
+    } catch (error) {
+        console.error(error.message);
+        return {
+            "result": -1,
+            "error": error.message,
+            "data": []
+        }
+    }
+}
