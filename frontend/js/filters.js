@@ -156,3 +156,25 @@ waterConsumptionSlider.addEventListener("change", async function ()  {
         document.getElementById("water-consumption-out").textContent = '-----'
     }
 })
+
+// funzione di reset dei filtri al click del bottone
+const resetClick = document.getElementById("btn-reset");
+resetClick.addEventListener('click', async function () {
+    totalProductionSlider.value = totalProductionSlider.min
+    netSalesSlider.value = netSalesSlider.min
+    employeesSlider.value = employeesSlider.min
+    co2EmissionsSlider.value = co2EmissionsSlider.min
+    waterConsumptionSlider.value = waterConsumptionSlider.min
+
+    document.getElementById("total-production-out").textContent = '-----'
+    document.getElementById("net-sales-out").textContent = '-----'
+    document.getElementById("employees-out").textContent = '-----'
+    document.getElementById("co2-emissions-out").textContent = '-----'
+    document.getElementById("water-consumption-out").textContent = '-----'
+
+    // resetto gli slider, dopodichè rieffettuo la chiamata per ottenere tutti i risultati
+    const data = await fetchReports();
+    formatArrayForPagination(data.data) //funzione di reports-pagination.js
+    displayYearsInFilter(data.data) // funzione che mostra nel filtro degli anni, tutti gli anni presi dal db
+    renderAndPaginateReports() //array di oggetti, funzione di reports-pagination.js
+})
