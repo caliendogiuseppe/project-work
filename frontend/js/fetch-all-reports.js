@@ -14,6 +14,7 @@ const fetchReports = async () => {
             throw new Error(`Response status: ${response.status}`);
         }
 
+        currentPage = 1
         const json = await response.json();
         return json;
     } catch (error) {

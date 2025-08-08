@@ -31,6 +31,7 @@ const filterByYear = async (year) => {
             throw new Error(`Response status: ${response.status}`);
         }
 
+        currentPage = 1
         const json = await response.json();
         return json;
     } catch (error) {
@@ -104,6 +105,7 @@ const advancedFiltersAPI = async (payload) => {
             throw new Error(`Response status: ${response.status}`);
         }
 
+        currentPage = 1
         const json = await response.json();
         return json;
     } catch (error) {
