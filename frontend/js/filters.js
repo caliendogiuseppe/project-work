@@ -57,13 +57,7 @@ filterClick.addEventListener("click", async function () {
     const co2Emissions = document.getElementById("emissioni-co2").value;
     const waterConsumption = document.getElementById("consumo-acqua").value;
 
-    const payload = {
-        /*total_production: totalProduction,
-        net_sales: netSales,
-        employees: employees,
-        co2_emissions: co2Emissions,
-        water_consumption: waterConsumption*/
-    }
+    const payload = {}
 
     const totalProductionIsMoved = isSliderMoved(document.getElementById("produzione_totale"))
     totalProductionIsMoved ? payload.total_production = totalProduction : ''
@@ -80,9 +74,17 @@ filterClick.addEventListener("click", async function () {
     const waterConsumptionIsMoved = isSliderMoved(document.getElementById("consumo-acqua"))
     waterConsumptionIsMoved ? payload.water_consumption = waterConsumption : ''
 
-    console.log(payload)
+    // se almeno uno slider è stato mosso, fai la chiamata API per il filtro, altrimenti fai chiamata API per tutti i report e blurra il bottone
     if (totalProductionIsMoved || netSalesIsMoved || emmployeesIsMoved || co2EmissionsIsMoved || waterConsumptionIsMoved) {
         const data = await advancedFiltersAPI(payload)
+
+        formatArrayForPagination(data.data) //funzione di reports-pagination.js
+        renderAndPaginateReports() //array di oggetti, funzione di reports-pagination.js
+    } else {
+        const data = await fetchReports();
+        formatArrayForPagination(data.data) //funzione di reports-pagination.js
+        displayYearsInFilter(data.data) // funzione che mostra nel filtro degli anni, tutti gli anni presi dal db
+        renderAndPaginateReports() //array di oggetti, funzione di reports-pagination.js
     }
     
 });
@@ -103,7 +105,6 @@ const advancedFiltersAPI = async (payload) => {
         }
 
         const json = await response.json();
-        console.log(json)
         return json;
     } catch (error) {
         console.error(error.message);
@@ -119,3 +120,39 @@ const advancedFiltersAPI = async (payload) => {
 function isSliderMoved(slider) {
     return slider.value !== slider.min;
 }
+
+// funzioni per resettare la label dello slider una volta che torna al valore iniziale
+const totalProductionSlider = document.getElementById("produzione_totale")
+totalProductionSlider.addEventListener("change", async function ()  {
+    if (!isSliderMoved(totalProductionSlider)) {
+        document.getElementById("total-production-out").textContent = '-----'
+    }
+})
+
+const netSalesSlider = document.getElementById("fatturato_netto")
+netSalesSlider.addEventListener("change", async function ()  {
+    if (!isSliderMoved(netSalesSlider)) {
+        document.getElementById("net-sales-out").textContent = '-----'
+    }
+})
+
+const employeesSlider = document.getElementById("dipendenti")
+employeesSlider.addEventListener("change", async function ()  {
+    if (!isSliderMoved(employeesSlider)) {
+        document.getElementById("employees-out").textContent = '-----'
+    }
+})
+
+const co2EmissionsSlider = document.getElementById("emissioni-co2")
+co2EmissionsSlider.addEventListener("change", async function ()  {
+    if (!isSliderMoved(co2EmissionsSlider)) {
+        document.getElementById("co2-emissions-out").textContent = '-----'
+    }
+})
+
+const waterConsumptionSlider = document.getElementById("consumo-acqua")
+waterConsumptionSlider.addEventListener("change", async function ()  {
+    if (!isSliderMoved(waterConsumptionSlider)) {
+        document.getElementById("water-consumption-out").textContent = '-----'
+    }
+})

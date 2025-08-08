@@ -78,7 +78,7 @@
                         <input type="range" id="produzione_totale" name="produzione_totale" min="950000" max="2300000" value="950000" step="10000" oninput="document.getElementById('total-production-out').value = this.value">
                     </div>
                     <div id="total-production--label" class="light-b h-100 center-filter filter-value">
-                        <p>Fino a&nbsp;</p><output id="total-production-out">950000</output>
+                        <p>Fino a&nbsp;</p><output id="total-production-out">----</output>
                     </div>
 
                     <!-- fatturato netto -->
@@ -86,13 +86,13 @@
                         <label for="fatturato_netto" class="filter-label">Fatturato netto (M €):</label>
                     </div>
                     <div id="net-sales--slider" class="h-100 center-filter">
-                        <input type="range" id="fatturato_netto" name="fatturato_netto" min="6200" max="17000" value="6200" step="500" oninput="document.getElementById('net-sales-out').value = this.value">
+                        <input type="range" id="fatturato_netto" name="fatturato_netto" min="6200" max="17000" value="6200" step="100" oninput="document.getElementById('net-sales-out').value = this.value">
                     </div>
                     <div id="net-sales--label" class="h-100 center-filter filter-value">
-                        <p>Fino a&nbsp;</p><output id="net-sales-out">6204</output>
+                        <p>Fino a&nbsp;</p><output id="net-sales-out">----</output>
                     </div>
 
-                    <!-- produzione totale -->
+                    <!-- dipendenti -->
                     <div id="employees--title" class="light-b h-100 center-filter">
                         <label for="dipendenti" class="filter-label">Dipendenti:</label>
                     </div>
@@ -100,7 +100,7 @@
                         <input type="range" id="dipendenti" name="dipendenti" min="21000" max="50000" value="21372" step="1000" oninput="document.getElementById('employees-out').value = this.value">
                     </div>
                     <div id="employees--label" class="light-b h-100 center-filter filter-value">
-                        <p>Fino a&nbsp;</p><output id="employees-out">21372</output>
+                        <p>Fino a&nbsp;</p><output id="employees-out">----</output>
                     </div>
 
                     <!-- emissioni CO2 -->
@@ -111,7 +111,7 @@
                         <input type="range" id="emissioni-co2" name="emissioni-co2" min="390000" max="560000" value="392023" step="10000" oninput="document.getElementById('co2-emissions-out').value = this.value">
                     </div>
                     <div id="co2-emissions--label" class="h-100 center-filter filter-value">
-                        <p>Fino a&nbsp;</p><output id="co2-emissions-out">392023</output>
+                        <p>Fino a&nbsp;</p><output id="co2-emissions-out">----</output>
                     </div>
 
                     <!-- consumo di acqua totale -->
@@ -122,7 +122,7 @@
                         <input type="range" id="consumo-acqua" name="consumo-acqua" min="4300000" max="5600000" value="4300000" step="10000" oninput="document.getElementById('water-consumption-out').value = this.value">
                     </div>
                     <div id="water-consumption--label" class="light-b h-100 center-filter filter-value">
-                        <p>Fino a&nbsp;</p><output id="water-consumption-out">4300000</output>
+                        <p>Fino a&nbsp;</p><output id="water-consumption-out">----</output>
                     </div>
         
                     <!-- bottoni dei filtri -->

@@ -153,7 +153,6 @@ const appendNumberOfResults = () => {
     }
 
     for (i = 0; i < currentPage-1; i++) {
-        console.log(formattedArray[i])
         beginOfPage += formattedArray[i].items.length
     }
 
