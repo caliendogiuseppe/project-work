@@ -83,6 +83,7 @@ const renderAndPaginateReports = () => {
             }  
         }
 
+        // aggiunta del numero dei risultati
         const numberOfResultsContainer = document.createElement('div'); 
         numberOfResultsContainer.className = 'number-of-results--container'; 
         numberOfResultsContainer.id = 'number-of-results--container';
@@ -90,6 +91,30 @@ const renderAndPaginateReports = () => {
 
         container.appendChild(numberOfResultsContainer)
 
+        // aggiunta <option> per ordinare i risultati
+        const orderResultsContainer = document.createElement('div'); 
+        orderResultsContainer.className = 'order-results--container'; 
+        orderResultsContainer.innerHTML = `
+            <p><strong> Ordina per: </strong></p>
+            <select name="order-results" id="order-results">
+                <option value="order-by-year-incr">Anno - CRESCENTE</option>
+                <option value="order-by-year-decr">Anno - DECRESCENTE</option>
+                <option value="order-by-total-production-incr">Produzione totale - CRESCENTE</option>
+                <option value="order-by-total-production-decr">Produzione totale - DECRESCENTE</option>
+                <option value="order-by-net-sales-incr">Fatturato netto - CRESCENTE</option>
+                <option value="order-by-net-sales-decr">Fatturato netto - DECRESCENTE</option>
+                <option value="order-by-employees-incr">Numero dipendenti - CRESCENTE</option>
+                <option value="order-by-employees-decr">Numero dipendenti - DECRESCENTE</option>
+                <option value="order-by-co2-emissions-incr">Emissioni CO₂ - CRESCENTE</option>
+                <option value="order-by-co2-emissions-decr">Emissioni CO₂ - DECRESCENTE</option>
+                <option value="order-by-water-consumption-incr">Consumo totale acqua - CRESCENTE</option>
+                <option value="order-by-water-consumption-decr">Consumo totale acqua - DECRESCENTE</option>
+            </select> 
+        `
+
+        container.appendChild(orderResultsContainer)
+
+        // aggiunta dei link per cambiare pagina
         let onCurrentPageId
         const paginationLinksContainer = document.createElement('div'); 
         paginationLinksContainer.className = 'pagination-links--container'; 

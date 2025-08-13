@@ -667,6 +667,36 @@ footer {
 }
 /************** fine - pulsanti per l'impaginazione ***************/
 
+/************** option per ordinare i filtri ***************/
+.order-results--container {
+    grid-area: 3/3/4/4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Stile per la select dei risultati */
+#order-results {
+    font-family: 'Arial', sans-serif; 
+    font-size: 0.8rem; 
+    color: #333333; 
+    background-color: #f9f9f9; 
+    border: 1px solid #cccccc; 
+    border-radius: 5px; 
+    padding: 4px 8px; 
+    width: 70%; 
+    box-sizing: border-box; 
+    cursor: pointer;
+}
+
+#order-results option {
+    background-color: #ffffff; /* sfondo bianco per le opzioni */
+    color: #333333; /* testo scuro */
+    font-size: 0.7rem; /* coerente con la select */
+    text-align: center;
+}
+
+/************** fine - option per ordinare i filtri ***************/
 
 /* -------------------------------
    STILI PAGINA DELLA SOSTENIBILITA' 
