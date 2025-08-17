@@ -95,21 +95,20 @@ const renderAndPaginateReports = () => {
         const orderResultsContainer = document.createElement('div'); 
         orderResultsContainer.className = 'order-results--container'; 
         orderResultsContainer.innerHTML = `
-            <p><strong> Ordina per: </strong></p>
-            <select name="order-results" id="order-results">
-                <option value="order-by-year-incr">Anno - CRESCENTE</option>
-                <option value="order-by-year-decr">Anno - DECRESCENTE</option>
-                <option value="order-by-total-production-incr">Produzione totale - CRESCENTE</option>
-                <option value="order-by-total-production-decr">Produzione totale - DECRESCENTE</option>
-                <option value="order-by-net-sales-incr">Fatturato netto - CRESCENTE</option>
-                <option value="order-by-net-sales-decr">Fatturato netto - DECRESCENTE</option>
-                <option value="order-by-employees-incr">Numero dipendenti - CRESCENTE</option>
-                <option value="order-by-employees-decr">Numero dipendenti - DECRESCENTE</option>
-                <option value="order-by-co2-emissions-incr">Emissioni CO₂ - CRESCENTE</option>
-                <option value="order-by-co2-emissions-decr">Emissioni CO₂ - DECRESCENTE</option>
-                <option value="order-by-water-consumption-incr">Consumo totale acqua - CRESCENTE</option>
-                <option value="order-by-water-consumption-decr">Consumo totale acqua - DECRESCENTE</option>
-            </select> 
+            <h5> Ordina per: </h5>
+            <select name="order-results" class="order-select" id="order-results">
+                <option value="order-by-year">Anno</option>
+                <option value="order-by-total-production">Produzione totale</option>
+                <option value="order-by-net-sales">Fatturato netto</option>
+                <option value="order-by-employees">Numero dipendenti</option>
+                <option value="order-by-co2-emissions">Emissioni CO₂</option>
+                <option value="order-by-water-consumption">Consumo totale acqua</option>
+            </select>
+            
+            <select name="incr-decr" class="order-select" id="incr-decr">
+                <option value="incr">a-Z</option>
+                <option value="decr">Z-a</option>
+            </select>
         `
 
         container.appendChild(orderResultsContainer)

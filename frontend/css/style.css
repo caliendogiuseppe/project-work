@@ -675,21 +675,32 @@ footer {
     justify-content: space-between;
 }
 
+.order-results--container h5 {
+    font-weight: 400;
+}
+
 /* Stile per la select dei risultati */
-#order-results {
+.order-select {
     font-family: 'Arial', sans-serif; 
     font-size: 0.8rem; 
     color: #333333; 
     background-color: #f9f9f9; 
     border: 1px solid #cccccc; 
     border-radius: 5px; 
-    padding: 4px 8px; 
-    width: 70%; 
+    padding: 3px 3px; 
     box-sizing: border-box; 
     cursor: pointer;
 }
 
-#order-results option {
+#incr-decr {
+    width: 25%;
+}
+
+#order-results {
+    width: 40%;
+}
+
+.ordrer-select option {
     background-color: #ffffff; /* sfondo bianco per le opzioni */
     color: #333333; /* testo scuro */
     font-size: 0.7rem; /* coerente con la select */
