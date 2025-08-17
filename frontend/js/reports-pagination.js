@@ -1,8 +1,10 @@
 let currentPage = 1
 let formattedArray = []
 let numberOfResults = 0
+let reports
 
 const formatArrayForPagination = (data) => {
+    reports = data
     numberOfResults = data.length
     let actualPage = 1;
     const elementsPerPage = 6;
@@ -97,12 +99,12 @@ const renderAndPaginateReports = () => {
         orderResultsContainer.innerHTML = `
             <h5> Ordina per: </h5>
             <select name="order-results" class="order-select" id="order-results">
-                <option value="order-by-year">Anno</option>
-                <option value="order-by-total-production">Produzione totale</option>
-                <option value="order-by-net-sales">Fatturato netto</option>
-                <option value="order-by-employees">Numero dipendenti</option>
-                <option value="order-by-co2-emissions">Emissioni CO₂</option>
-                <option value="order-by-water-consumption">Consumo totale acqua</option>
+                <option value="year">Anno</option>
+                <option value="total-production">Produzione totale</option>
+                <option value="net-sales">Fatturato netto</option>
+                <option value="employees">Numero dipendenti</option>
+                <option value="co2-emissions">Emissioni CO₂</option>
+                <option value="water-consumption">Consumo totale acqua</option>
             </select>
             
             <select name="incr-decr" class="order-select" id="incr-decr">
@@ -151,6 +153,7 @@ const nextPage = () => {
     }
     
     renderAndPaginateReports()
+    keepOptionsStatus()
 }
 
 // funzione per andare alla pagina precedente
@@ -160,12 +163,14 @@ const previousPage = () => {
     }
 
     renderAndPaginateReports()
+    keepOptionsStatus()
 }
 
 // funzione per andare alla pagina passata come parametro (viene utilizzata al click sui numeri dell'impaginazione)
 const changePage = (page = 1) => {
     currentPage = page;
     renderAndPaginateReports()
+    keepOptionsStatus()
 }
 
 const appendNumberOfResults = () => {
