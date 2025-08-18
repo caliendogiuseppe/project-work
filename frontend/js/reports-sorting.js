@@ -79,7 +79,7 @@ const sortAndFormatArray = (value, sortDirection) => {
 
 const keepOptionsStatus = () => {
     let orderResults = document.getElementById('order-results');
-    orderResults.value = prevOrderResults
+    orderResults.value = prevOrderResults != null ? prevOrderResults : 'year'
     sortDirection = document.getElementById('incr-decr');
-    sortDirection.value = prevSortDirection
+    sortDirection.value = prevSortDirection != null ? prevSortDirection : 'incr'
 }
