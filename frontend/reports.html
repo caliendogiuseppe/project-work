@@ -76,7 +76,7 @@
                         <label for="produzione_totale" class="filter-label">Produzione totale (tonnellate):</label>
                     </div>
                     <div id="total-production--slider" class="light-b h-100 center-filter">
-                        <input type="range" id="produzione_totale" name="produzione_totale" min="950000" max="2300000" value="950000" step="10000" oninput="document.getElementById('total-production-out').value = this.value">
+                        <input type="range" id="produzione_totale" name="produzione_totale" min="950000" max="2300000" value="950000" step="50000" oninput="document.getElementById('total-production-out').value = this.value">
                     </div>
                     <div id="total-production--label" class="light-b h-100 center-filter filter-value">
                         <p>Fino a&nbsp;</p><output id="total-production-out">----</output>
@@ -87,7 +87,7 @@
                         <label for="fatturato_netto" class="filter-label">Fatturato netto (milioni €):</label>
                     </div>
                     <div id="net-sales--slider" class="h-100 center-filter">
-                        <input type="range" id="fatturato_netto" name="fatturato_netto" min="6200" max="17000" value="6200" step="100" oninput="document.getElementById('net-sales-out').value = this.value">
+                        <input type="range" id="fatturato_netto" name="fatturato_netto" min="6200" max="17000" value="6200" step="500" oninput="document.getElementById('net-sales-out').value = this.value">
                     </div>
                     <div id="net-sales--label" class="h-100 center-filter filter-value">
                         <p>Fino a&nbsp;</p><output id="net-sales-out">----</output>
@@ -120,7 +120,7 @@
                         <label for="consumo-acqua" class="filter-label">Consumo totale di acqua (m³):</label>
                     </div>
                     <div id="water-consumption--slider" class="light-b h-100 center-filter">
-                        <input type="range" id="consumo-acqua" name="consumo-acqua" min="4300000" max="5600000" value="4300000" step="10000" oninput="document.getElementById('water-consumption-out').value = this.value">
+                        <input type="range" id="consumo-acqua" name="consumo-acqua" min="4300000" max="5600000" value="4300000" step="100000" oninput="document.getElementById('water-consumption-out').value = this.value">
                     </div>
                     <div id="water-consumption--label" class="light-b h-100 center-filter filter-value">
                         <p>Fino a&nbsp;</p><output id="water-consumption-out">----</output>
