@@ -53,7 +53,7 @@ const renderAndPaginateReports = () => {
                         <div class="report-card--values">
                             <ul class="report-values-list">
                                 <li><span class="label">Produzione totale:</span> <span class="value">${report.produzione_totale} t</span></li>
-                                <li><span class="label">Fatturato netto:</span> <span class="value">${report.fatturato_netto} M€</span></li>
+                                <li><span class="label">Fatturato netto:</span> <span class="value">${report.fatturato_netto} mln €</span></li>
                                 <li><span class="label">Dipendenti:</span> <span class="value">${report.dipendenti}</span></li>
                                 <li><span class="label">Emissioni CO₂:</span> <span class="value">${report.emissioni_co2} t</span></li>
                                 <li><span class="label">Consumo acqua:</span> <span class="value">${report.consumo_acqua_totale} m³</span></li>
