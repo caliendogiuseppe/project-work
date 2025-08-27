@@ -1,8 +1,35 @@
+/**
+ * reports-pagination.js
+ *
+ * Gestisce l’impaginazione e la visualizzazione dei report nella pagina reports.html.
+ * - Divide i dati in pagine da 6 elementi ciascuna.
+ * - Mostra dinamicamente le card dei report con i dati principali (anno, titolo, valori economici ed ambientali).
+ * - Genera i controlli di navigazione (pulsanti avanti/indietro e numeri di pagina).
+ * - Gestisce anche l’ordinamento dei risultati e l’indicazione del numero di report trovati.
+ *
+ */
+
+
+// Numero della pagina corrente
 let currentPage = 1
+
+// Array formattato per contenere le pagine con i rispettivi report
 let formattedArray = []
+
+// Numero totale dei report recuperati dal backend
 let numberOfResults = 0
+
+// Array originale dei report
 let reports
 
+/**
+ * formatArrayForPagination
+ *
+ * Riceve i dati dei report e li divide in blocchi da 6 elementi,
+ * popolando l'array di oggetti 'formattedArray' in cui ogni oggetto rappresenta una pagina.
+ * 
+ * @param {Array} data - Elenco dei report ricevuti dal backend
+ */
 const formatArrayForPagination = (data) => {
     reports = data
     numberOfResults = data.length
@@ -30,6 +57,17 @@ const formatArrayForPagination = (data) => {
     }
 }
 
+/**
+ * renderAndPaginateReports
+ *
+ * Gestisce il rendering dei report per la pagina corrente.
+ * Inserisce le card corrispondenti ai report della pagina selezionata e
+ * aggiunge in fondo alla pagina:
+ *   - il numero di risultati visualizzati,
+ *   - i controlli per l’ordinamento dei dati,
+ *   - i link di paginazione (precedente, successiva, numeri di pagina).
+ * Inoltre viene mostrato un messaggio se non ci sono report disponibili.
+ */
 const renderAndPaginateReports = () => {
     const container = document.getElementById('reports-container'); // 1- trovo il container dall'id (in seguito al suo interno inserirò le card figlie)
     container.innerHTML = ''; //2- lo svuoto di tutto
@@ -146,7 +184,10 @@ const renderAndPaginateReports = () => {
     }
 }
 
-// funzione per andare alla pagina successiva
+/**
+ * nextPage
+ * Avanza alla pagina successiva (se esiste) e ricarica i report.
+ */
 const nextPage = () => {
     if (currentPage < formattedArray.length) {
         currentPage ++;
@@ -156,7 +197,10 @@ const nextPage = () => {
     keepOptionsStatus()
 }
 
-// funzione per andare alla pagina precedente
+/**
+ * previousPage
+ * Torna alla pagina precedente (se esiste) e ricarica i report.
+ */
 const previousPage = () => {
     if (currentPage > 1) {
         currentPage --;
@@ -166,13 +210,27 @@ const previousPage = () => {
     keepOptionsStatus()
 }
 
-// funzione per andare alla pagina passata come parametro (viene utilizzata al click sui numeri dell'impaginazione)
+/**
+ * changePage
+ * Carica la pagina passata come parametro e aggiorna la visualizzazione.
+ * @param {number} page - Numero della pagina da caricare
+ */ 
 const changePage = (page = 1) => {
     currentPage = page;
     renderAndPaginateReports()
     keepOptionsStatus()
 }
 
+/**
+ * appendNumberOfResults
+ *
+ * Restituisce una stringa HTML che mostra quanti report sono visualizzati
+ * nella pagina corrente rispetto al numero totale.
+ *
+ * Esempio: "1 - 6 di 20 reports totali"
+ *
+ * @returns {string} HTML con il conteggio dei risultati
+ */
 const appendNumberOfResults = () => {
     let resultsUpToCurrentPage = 0
     let beginOfPage = 1
@@ -190,5 +248,6 @@ const appendNumberOfResults = () => {
     return numberOfResults > 1 ? `<h5>${beginOfPage} - ${resultsUpToCurrentPage} di ${numberOfResults} reports totali</h5>` : `<h5>${beginOfPage} - ${resultsUpToCurrentPage} di ${numberOfResults} report totale</h5>`
 }
 
+// Rende disponibili le funzioni al di fuori del file
 window.formatArrayForPagination = formatArrayForPagination;
 window.renderAndPaginateReports = renderAndPaginateReports;

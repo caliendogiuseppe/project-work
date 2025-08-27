@@ -1,6 +1,24 @@
+/**
+ * reports-sorting.js
+ * 
+ * File dedicato alla gestione delle operazioni di ordinamento dei report.
+ * Consente all'utente di scegliere un criterio di ordinamento (anno, fatturato, 
+ * dipendenti, ecc.) e la direzione (crescente/decrescente). 
+ * L'ordinamento è applicato direttamente all'array dei report già recuperato 
+ * dal backend e, successivamente, viene aggiornata la paginazione.
+ */
+
+
+// Variabili globali per memorizzare l'ultimo stato di ordinamento
 let prevOrderResults
 let prevSortDirection
 
+/**
+ * Listener sugli elementi <select> del DOM.
+ * - Se cambia l'elemento con id "order-results" → aggiorna il criterio di ordinamento.
+ * - Se cambia l'elemento con id "incr-decr" → aggiorna la direzione (crescente/decrescente).
+ * In entrambi i casi viene richiamata la funzione sortAndFormatArray().
+ */
 document.addEventListener("change", (e) => {
     let value
     let sortDirection
@@ -27,6 +45,12 @@ document.addEventListener("change", (e) => {
     
 });
 
+/**
+ * sortAndFormatArray(value, sortDirection)
+ * 
+ * Esegue l'ordinamento dell'array globale `reports` sulla base del criterio selezionato.
+ * Una volta ordinati i dati, richiama le funzioni di paginazione per aggiornare l'interfaccia.
+ */
 const sortAndFormatArray = (value, sortDirection) => {
     switch(value) {
         case 'year':
@@ -73,10 +97,18 @@ const sortAndFormatArray = (value, sortDirection) => {
             break;
     }
 
+    // Aggiornamento della paginazione dopo l'ordinamento
     formatArrayForPagination(reports)
     renderAndPaginateReports()
 }
 
+/**
+ * keepOptionsStatus()
+ * 
+ * Mantiene salvata la scelta dell’utente riguardo il criterio di ordinamento e la direzione.
+ * In questo modo se i dati vengono ricaricati o la pagina aggiornata,
+ * le opzioni restano coerenti con l'ultimo stato selezionato.
+ */
 const keepOptionsStatus = () => {
     let orderResults = document.getElementById('order-results');
     orderResults.value = prevOrderResults != null ? prevOrderResults : 'year'
