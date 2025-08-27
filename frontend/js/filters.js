@@ -111,13 +111,13 @@ filterClick.addEventListener("click", async function () {
     if (totalProductionIsMoved || netSalesIsMoved || emmployeesIsMoved || co2EmissionsIsMoved || waterConsumptionIsMoved) {
         const data = await advancedFiltersAPI(payload)
 
-        formatArrayForPagination(data.data) //funzione di reports-pagination.js
-        renderAndPaginateReports() //array di oggetti, funzione di reports-pagination.js
+        formatArrayForPagination(data.data) 
+        renderAndPaginateReports() 
     } else {
         const data = await fetchReports();
-        formatArrayForPagination(data.data) //funzione di reports-pagination.js
-        displayYearsInFilter(data.data) // funzione che mostra nel filtro degli anni, tutti gli anni presi dal db
-        renderAndPaginateReports() //array di oggetti, funzione di reports-pagination.js
+        formatArrayForPagination(data.data) 
+        displayYearsInFilter(data.data) 
+        renderAndPaginateReports() 
     }
     
 });

@@ -1,8 +1,20 @@
 /**
- * file contenente tutte le funzioni utili per la gestione dei report e l'interazione tra database e applicativo backend
+ * report-controller.js
+ * 
+ * File contenente tutte le funzioni utili per la gestione dei report 
+ * e l'interazione tra database e applicativo backend.
  */
+
+// import del modulo di connessione al database
 const db = require('../utils/db')
 
+/**
+ * getAllInfo
+ * 
+ * Funzione per ottenere tutti i report presenti nel database.
+ * 
+ * @returns {Promise<Array>} Array di oggetti contenenti tutti i report
+ */
 const getAllInfo = async () => {
     const QUERY = `SELECT * FROM reports`
 
@@ -13,6 +25,14 @@ const getAllInfo = async () => {
     return result[0]
 }
 
+/**
+ * filterByYear
+ * 
+ * Funzione per ottenere tutti i report filtrati in base all'anno specificato.
+ * 
+ * @param {number} year Anno dei report da recuperare
+ * @returns {Promise<Array>} Array di oggetti contenenti i report dell'anno selezionato
+ */
 const filterByYear = async (year) => {
     const QUERY = `SELECT * FROM reports WHERE anno = ${year}`
 
@@ -23,6 +43,14 @@ const filterByYear = async (year) => {
     return result[0]
 }
 
+/**
+ * advancedFilters
+ * 
+ * Applica filtri avanzati sui report in base ai criteri forniti.
+ * 
+ * @param {Object} data - Oggetto contenente i filtri opzionali
+ * @returns {Promise<Array>} Array di oggetti contenenti i report filtrati
+ */
 const advancedFilters = async (data) => {
     let QUERY = `SELECT * FROM reports WHERE`
     QUERY += (data.total_production !== undefined) ? ` produzione_totale <= ${data.total_production} AND` : ``
