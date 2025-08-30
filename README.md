@@ -16,7 +16,11 @@ Project work - website for the download of sustainability reports
 │		│   
 │		│
 │		├── js/
-│		│   └── fetch-all-reports.js           # codice Javascript che esegue la chiamata API al backend per estrapolare le informazioni di tutti i report
+│		│   ├── fetch-all-reports.js           # Esegue la chiamata API al backend per estrapolare le informazioni di tutti i report
+|       │   ├── config.js                      # File di configurazione del frontend
+|       │   ├── filters.js                     # Gestisce i filtri applicabili ai report nella pagina reports.html
+|       │   ├── reports-pagination.js          # Gestisce l’impaginazione e la visualizzazione dei report nella pagina reports.html
+|       │   └── reports-sorting.js             # Gestisce le operazioni di ordinamento dei report
 │		│
 │		└── assets/
 │				├── img/              # Immagini statiche usate nel sito
@@ -25,14 +29,16 @@ Project work - website for the download of sustainability reports
 │	    	 
 │
 ├── backend/
-│   	├── index.js	                    # punto di ingresso principale dell'applicazione backend Node.js/Express.
+│   	├── index.js	                    # Punto di ingresso principale dell'applicazione backend Node.js/Express.
 │   	├── routes/
-│		│		└── report-routes.js	    # file nel quale sono contenute le rotte destinate alla gestione/estrapolazione dei report
+│		│		└── report-routes.js	    # File nel quale sono contenute le rotte destinate alla gestione/estrapolazione dei report
 │		│
-│   	├── controllers/			        # i controller necessari contenenti la logica computazionale che viene eseguita quando viene ricevuta una richiesta
-|       |      └── report-controller.js 
-│   	├── utils/				            # contiene le funzioni comuni e evita duplicazione del codice
-│       │      └── db.js                    # file per la gestione della connessione e interazione backend-db
+│   	├── controllers/			        
+|       |      └── report-controller.js     # File contenente tutte le funzioni utili per la gestione dei report e l'interazione tra database e applicativo backend
+|       |
+│   	├── utils/				            
+│       │      └── db.js                    # File per la gestione della connessione e interazione backend-db
+|       |
 │   	├── package.json
 │   	├── reports/ 				        # cartella in cui sono contenuti i reports, nominati secondo l'anno di redazione
 │   	└── node_modules/
