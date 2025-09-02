@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
  * Consente richieste da tutte le origini.
  * Per limitare a specifici domini, si può passare un oggetto { origin: '...' }
  */
-app.use(cors()); //app.use(cors({ origin: 'http://localhost:5500' }))
+app.use(cors({ origin: 'https://project-work-frontend.onrender.com/' })); //app.use(cors({ origin: 'http://localhost:5500' }))
 
 /**
  * Middleware per il parsing del body in formato JSON
