@@ -891,6 +891,17 @@ footer {
 }
 
 
+@media ((min-width: 769px) and (max-width: 1162px)) {
+    .reports-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filters-sidebar {
+        margin: 0 15%;
+    }
+}
+
 /* responsive - <=768px */
 @media (max-width: 768px) {
     .navbar {
