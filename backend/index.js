@@ -5,19 +5,39 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 3000;
 
-app.use(cors()); //consente tutte le origini
-// app.use(cors({ origin: 'http://localhost:5500' }))
+/**
+ * Middleware CORS
+ * Consente richieste da tutte le origini.
+ * Per limitare a specifici domini, si può passare un oggetto { origin: '...' }
+ */
+app.use(cors()); //app.use(cors({ origin: 'http://localhost:5500' }))
 
-app.use(express.json()); // fondamentale per il parsing del body delle richieste in POST
+/**
+ * Middleware per il parsing del body in formato JSON
+ * Necessario per leggere i dati inviati tramite POST
+ */
+app.use(express.json()); 
 
 
-//quando l'app riceve una richiesta https col prefisso '/reports', reindirizza la richiesta al gestore di rotte 'report-routes'
+/**
+ * API routes
+ * Tutte le richieste con prefisso '/api/reports' vengono gestite dal router reportRoutes
+ */
 app.use('/api/reports', reportRoutes) 
 
-// riga di codice per servire i file statici, ossia i report in formato .pdf presenti nella cartella 'reports' saranno accessibili da http://{host}/public/nomefile.pdf
+/**
+ * Servizio dei file statici
+ * Tutti i file PDF nella cartella 'reports' saranno accessibili tramite
+ * http://{host}/public/nomefile.pdf
+ */
 app.use('/public', express.static('./reports/'));
 
-//rotta che consente di scaricare direttamente il file invece di aprirlo inline
+/**
+ * GET /download/:filename
+ * Permette di scaricare direttamente un file PDF invece di aprirlo inline
+ * 
+ * @param {string} req.params.filename - Nome del file da scaricare
+ */
 app.get('/download/:filename', async (req, res) => {
     const filename = req.params.filename;
     const filePath = path.join(__dirname, 'reports', filename);
@@ -29,7 +49,9 @@ app.get('/download/:filename', async (req, res) => {
     });
 })
 
-//inizializzazione del server in ascolto sulla porta 3000
+/**
+ * Avvio del server Express
+ */
 app.listen(port, () => {
     console.log(`Server in ascolto sulla porta ${port}`)
 })
