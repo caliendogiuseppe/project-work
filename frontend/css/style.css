@@ -891,15 +891,44 @@ footer {
 }
 
 
-@media ((min-width: 769px) and (max-width: 1162px)) {
+@media (min-width: 769px) and (max-width: 1162px) {
     .reports-main {
         display: flex;
         flex-direction: column;
     }
 
+    .year-filter--container {
+        padding: 5% 0;
+    }
+
+    .year-filter--container > h3 {
+        margin-top: 0;
+    }
+
     .filters-sidebar {
         margin: 0 15%;
     }
+
+    .reports-container {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.1fr 0.5fr;
+    }
+
+    .number-of-results--container {
+        grid-area: 4/1/5/2;
+    }
+
+    .order-results--container {
+        grid-area: 5/2/6/3;
+    }
+
+    .pagination-links--container {
+        grid-area: 5/1/6/2;
+    }
+
+    
 }
 
 /* responsive - <=768px */
