@@ -111,10 +111,12 @@ filterClick.addEventListener("click", async function () {
     if (totalProductionIsMoved || netSalesIsMoved || emmployeesIsMoved || co2EmissionsIsMoved || waterConsumptionIsMoved) {
         const data = await advancedFiltersAPI(payload)
 
+        showPopupNumbersOfResults(data)
         formatArrayForPagination(data.data) 
         renderAndPaginateReports() 
     } else {
         const data = await fetchReports();
+        showPopupNumbersOfResults(data)
         formatArrayForPagination(data.data) 
         displayYearsInFilter(data.data) 
         renderAndPaginateReports() 
@@ -231,7 +233,20 @@ resetClick.addEventListener('click', async function () {
 
     // resetto gli slider, dopodichè rieffettuo la chiamata per ottenere tutti i risultati
     const data = await fetchReports();
+
+    showPopupNumbersOfResults(data)
     formatArrayForPagination(data.data) 
     displayYearsInFilter(data.data) 
     renderAndPaginateReports() 
 })
+
+const showPopupNumbersOfResults = (data) => {
+    const popup = document.getElementById("popup")
+    popup.textContent = data.data.length + " report trovati"
+    popup.classList.add("show");
+
+    // scompare dopo 3 secondi
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 3000);
+}
