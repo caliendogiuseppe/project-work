@@ -20,7 +20,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const data = await fetchReports();
 
-    showPopupNumbersOfResults(data)
     formatArrayForPagination(data.data) 
     displayYearsInFilter(data.data) 
     renderAndPaginateReports()
